@@ -1,0 +1,15 @@
+//
+//  RealRaag.pch
+//  RealRaag
+//
+//  Created by Matthew S. Hill on 7/24/14.
+//  Copyright (c) 2014 Matthew S. Hill. All rights reserved.
+//
+
+#ifndef RealRaag_RealRaag_pch
+#define RealRaag_RealRaag_pch
+#define kLatencyInSeconds 0.005
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
