@@ -78,7 +78,7 @@
     
     //Sampler AU
     cd.componentType = kAudioUnitType_MusicDevice;
-    cd.componentSubType = kAudioUnitSubType_RemoteIO;
+    cd.componentSubType = kAudioUnitSubType_Sampler;
     
     //Add the Sampler unit node to the graph
     result = AUGraphAddNode(self.processingGraph, &cd, &samplerNode1);
@@ -90,7 +90,7 @@
     //Multichannell mixer unit to add
     AudioComponentDescription MixerUnitDescription;
     MixerUnitDescription.componentType = kAudioUnitType_Mixer;
-    MixerUnitDescription.componentSubType = kAudioUnitType_Mixer;
+    MixerUnitDescription.componentSubType = kAudioUnitSubType_MultiChannelMixer;
     MixerUnitDescription.componentManufacturer = kAudioUnitManufacturer_Apple;
     
     MixerUnitDescription.componentFlags = 0;
@@ -146,8 +146,8 @@
     result = AudioUnitSetProperty(self.ioUnit, kAudioUnitProperty_SampleRate, kAudioUnitScope_Output, 0, &_graphSampleRate, sampleRatePropertySize);
     
     //Obtain the value of the max-frames-per-slice form the I/O unit
-    result = AudioUnitGetProperty(self.ioUnit, kAudioUnitProperty_MaximumFramesPerSlice, kAudioUnitScope_Output, 0, &framesPerSlice, &framesPerSlicePropertySize);
-    NSCAssert(result == noErr, @"Unable to retrieve the maximum frames per slice property from teh I/O unit. Error code: %d '%.4s", (int) result, (const char *) &result);
+    result = AudioUnitGetProperty(self.ioUnit, kAudioUnitProperty_MaximumFramesPerSlice, kAudioUnitScope_Global, 0, &framesPerSlice, &framesPerSlicePropertySize);
+    NSCAssert(result == noErr, @"Unable to retrieve the maximum frames per slice property from the I/O unit. Error code: %d '%.4s", (int) result, (const char *) &result);
     
     //Set the Sampler unit's output sample rate
     result = AudioUnitSetProperty(self.samplerUnit1, kAudioUnitProperty_SampleRate, kAudioUnitScope_Output, 0, &_graphSampleRate, sampleRatePropertySize);
@@ -180,7 +180,7 @@
 
 - (IBAction)loadAUPresets:(id)sender {
     
-    NSURL *presetURL = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"rubab1stString" ofType:@"auprest"]];
+    NSURL *presetURL = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"rubab1stString" ofType:@"aupreset"]];
     if(presetURL){
         NSLog(@"Attempting to load preset 1 '%@'\n", [presetURL description]);
     }
@@ -194,6 +194,7 @@
     if(presetURL){
         NSLog(@"Attempting to load preset 2 '%@'\n", [presetURL description]);
     }
+    
     else {
         NSLog(@"COULD NOT GET PRESET PATH");
     }
@@ -224,7 +225,7 @@
     CFPropertyListRef presetPropertyList = 0;
     CFPropertyListFormat dataFormat = 0;
     CFErrorRef errorRef = 0;
-    presetPropertyList = CFPropertyListCreateData(kCFAllocatorDefault, propertyResourceData, kCFPropertyListImmutable, &dataFormat, &errorRef);
+    presetPropertyList = CFPropertyListCreateWithData(kCFAllocatorDefault, propertyResourceData, kCFPropertyListImmutable, &dataFormat, &errorRef);
     
     //Set the class info  property for the Sampler unit using the property list as the value
     if (presetPropertyList != 0) {
@@ -283,7 +284,11 @@
 #pragma mark - Public Methods
 
 - (void) playNoteOn:(UInt32)noteNum withVelocity:(UInt32)velocity {
-    //MusicDeviceMIDIEvent
+    AudioUnit *sampler = &(_samplerUnit2);
+    MusicDeviceMIDIEvent(*sampler, 144, 48, 127, 0);
+    NSLog(@"%d", (unsigned int)noteNum);
+    
+    
 }
 
 
