@@ -311,6 +311,7 @@
         notes = _notes2;
         samplerUnit = &(_samplerUnit2);
     }
+    
     if(bus == 2)
     {
         notes = _notes3;
