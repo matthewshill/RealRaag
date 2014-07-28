@@ -32,9 +32,7 @@
 }
 
 - (IBAction)playNoteOn:(UIButton *)b {
-    UInt32 note = (UInt32)b.tag;
-    UInt32 velocity = 127;
-    [self.audioController playNoteOn:note withVelocity:velocity];
+    [self.audioController playNoteOn:b.tag];
 }
 
 @end

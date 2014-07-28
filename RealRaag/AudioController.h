@@ -13,6 +13,6 @@
 
 @interface AudioController : NSObject
 
-- (void) playNoteOn:(UInt32) noteNum withVelocity:(UInt32) velocity;
+- (void) playNoteOn:(UInt32) noteNum;
 + (AudioController *)sharedInstance;
 @end

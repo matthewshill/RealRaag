@@ -7,6 +7,7 @@
 //
 
 #import "AudioController.h"
+#import "MIDIHelper.h"
 #import <AssertMacros.h>
 
 @interface AudioController()
@@ -260,7 +261,7 @@
     if (audioSessionError != nil) {NSLog (@"Error setting preffered buffer size. "); return NO;}
     
     [mySession setActive:YES error:&audioSessionError];
-    if (audioSessionError != nil) {NSLog (@"Unable to stop the audio processing graph. Error code: %d '%.4s'"); return NO;}
+    if (audioSessionError != nil) {NSLog (@"Error activating the audio session."); return NO;}
     self.graphSampleRate = [mySession sampleRate];
     return YES;
 }
@@ -283,10 +284,51 @@
 
 #pragma mark - Public Methods
 
-- (void) playNoteOn:(UInt32)noteNum withVelocity:(UInt32)velocity {
-    AudioUnit *sampler = &(_samplerUnit2);
-    MusicDeviceMIDIEvent(*sampler, 144, 48, 127, 0);
-    NSLog(@"%d", (unsigned int)noteNum);
+- (void) playNoteOn:(UInt32)noteNum {
+    if(!_notes1){
+        self.notes1 = [[NSMutableArray alloc] initWithArray:[MIDIHelper notesForScale:MidiScaleCMaj register:MidiRegisterFull]];
+    }
+    if(!_notes2){
+        self.notes2 = [[NSMutableArray alloc] initWithArray:[MIDIHelper notesForScale:MidiScaleCMaj register:MidiRegisterFull]];
+    }
+    if (!_notes3) {
+        self.notes3 = [[NSMutableArray alloc] initWithArray:[MIDIHelper notesForScale:MidiScaleCMaj register:MidiRegisterFull]];
+    }
+    
+    AudioUnit *samplerUnit = nil;
+    NSArray *notes = nil;
+    
+    NSInteger bus = floor(noteNum/1000) - 1;
+    UInt32 note = (noteNum % 1000);
+    
+    if(bus == 0)
+    {
+        notes = _notes1;
+        samplerUnit = &(_samplerUnit1);
+    }
+    if(bus == 1)
+    {
+        notes = _notes2;
+        samplerUnit = &(_samplerUnit2);
+    }
+    if(bus == 2)
+    {
+        notes = _notes3;
+        samplerUnit = &(_samplerUnit3);
+    }
+    
+    UInt32 noteCommand = 0x9 << 4 | 0;
+    UInt32 onVelocity = 127;
+    
+    NSLog(@"bus: %ld", (long)bus);
+    NSLog(@"note number: %d", (unsigned int)note);
+    OSStatus result = noErr;
+    require_noerr(result = MusicDeviceMIDIEvent(*samplerUnit, noteCommand, note, onVelocity, 0), logTheError);
+    
+logTheError:
+    if (result != noErr) {
+        NSLog(@"Unable to start playing the note.Error code: %d '%.4s'\n", (int) result, (const char *)&result);
+    }
     
     
 }

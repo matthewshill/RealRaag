@@ -49,6 +49,7 @@
 		5CF31C3F197F00380076A68D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF31C3E197F00380076A68D /* Images.xcassets */; };
 		5CF31C4B197F00380076A68D /* RealRaagTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF31C4A197F00380076A68D /* RealRaagTests.m */; };
 		5CF31C56197F03CE0076A68D /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF31C55197F03CE0076A68D /* AudioController.m */; };
+		5CFA83821986A745007C2F20 /* MIDIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFA83811986A745007C2F20 /* MIDIHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,8 @@
 		5CF31C4A197F00380076A68D /* RealRaagTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealRaagTests.m; sourceTree = "<group>"; };
 		5CF31C54197F03CE0076A68D /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
 		5CF31C55197F03CE0076A68D /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
+		5CFA83801986A745007C2F20 /* MIDIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDIHelper.h; sourceTree = "<group>"; };
+		5CFA83811986A745007C2F20 /* MIDIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIDIHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +213,8 @@
 				5CF31C3B197F00380076A68D /* Main.storyboard */,
 				5CF31C3E197F00380076A68D /* Images.xcassets */,
 				5CF31C31197F00380076A68D /* Supporting Files */,
+				5CFA83801986A745007C2F20 /* MIDIHelper.h */,
+				5CFA83811986A745007C2F20 /* MIDIHelper.m */,
 			);
 			path = RealRaag;
 			sourceTree = "<group>";
@@ -381,6 +386,7 @@
 				5CF31C3A197F00380076A68D /* ViewController.m in Sources */,
 				5CF31C37197F00380076A68D /* AppDelegate.m in Sources */,
 				5CF31C56197F03CE0076A68D /* AudioController.m in Sources */,
+				5CFA83821986A745007C2F20 /* MIDIHelper.m in Sources */,
 				5CF31C34197F00380076A68D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
