@@ -285,6 +285,7 @@
 #pragma mark - Public Methods
 
 - (void) playNoteOn:(UInt32)noteNum {
+    
     if(!_notes1){
         self.notes1 = [[NSMutableArray alloc] initWithArray:[MIDIHelper notesForScale:MidiScaleCMaj register:MidiRegisterFull]];
     }
