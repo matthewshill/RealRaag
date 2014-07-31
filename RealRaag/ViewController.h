@@ -11,9 +11,8 @@
 
 @interface ViewController : UIViewController
 
-@property (nonatomic, strong) AudioController *audioController;
-
 - (IBAction)playNoteOn:(UIButton *)b;
+
 
 @end
 

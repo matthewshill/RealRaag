@@ -14,7 +14,6 @@
 
 @implementation ViewController
 
-@synthesize audioController = _audioController;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,7 +23,7 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    self.audioController = [AudioController sharedInstance];    
+       
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -32,7 +31,8 @@
 }
 
 - (IBAction)playNoteOn:(UIButton *)b {
-    [self.audioController playNoteOn:b.tag];
+    [[AudioController sharedInstance] playNoteOn:b.tag];
 }
+
 
 @end

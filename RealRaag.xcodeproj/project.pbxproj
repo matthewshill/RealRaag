@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C0BF06C19899E4F0069578B /* FretView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0BF06B19899E4F0069578B /* FretView.m */; };
+		5C15A1FE198851AE0098ADF4 /* StrumView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C15A1FD198851AE0098ADF4 /* StrumView.m */; };
+		5C19E152198958C600AFBFE1 /* GestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C19E151198958C600AFBFE1 /* GestureViewController.m */; };
+		5C19E155198969E800AFBFE1 /* BaseStringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C19E154198969E800AFBFE1 /* BaseStringView.m */; };
 		5C7AC15A1987138F003F5940 /* rubab1stString.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 5C7AC1571987138E003F5940 /* rubab1stString.aupreset */; };
 		5C7AC15B1987138F003F5940 /* rubab2ndString.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 5C7AC1581987138F003F5940 /* rubab2ndString.aupreset */; };
 		5C7AC15C1987138F003F5940 /* rubab3rdString.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 5C7AC1591987138F003F5940 /* rubab3rdString.aupreset */; };
@@ -32,6 +36,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C0BF06A19899E4F0069578B /* FretView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FretView.h; sourceTree = "<group>"; };
+		5C0BF06B19899E4F0069578B /* FretView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FretView.m; sourceTree = "<group>"; };
+		5C15A1FC198851AE0098ADF4 /* StrumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrumView.h; sourceTree = "<group>"; };
+		5C15A1FD198851AE0098ADF4 /* StrumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrumView.m; sourceTree = "<group>"; };
+		5C19E150198958C600AFBFE1 /* GestureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureViewController.h; sourceTree = "<group>"; };
+		5C19E151198958C600AFBFE1 /* GestureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureViewController.m; sourceTree = "<group>"; };
+		5C19E153198969E800AFBFE1 /* BaseStringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseStringView.h; sourceTree = "<group>"; };
+		5C19E154198969E800AFBFE1 /* BaseStringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseStringView.m; sourceTree = "<group>"; };
 		5C4BD9711981596200A31AF4 /* RealRaag.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealRaag.pch; sourceTree = "<group>"; };
 		5C7AC1571987138E003F5940 /* rubab1stString.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rubab1stString.aupreset; sourceTree = "<group>"; };
 		5C7AC1581987138F003F5940 /* rubab2ndString.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rubab2ndString.aupreset; sourceTree = "<group>"; };
@@ -99,6 +111,12 @@
 				5CF31C55197F03CE0076A68D /* AudioController.m */,
 				5CF31C35197F00380076A68D /* AppDelegate.h */,
 				5CF31C36197F00380076A68D /* AppDelegate.m */,
+				5C0BF06A19899E4F0069578B /* FretView.h */,
+				5C0BF06B19899E4F0069578B /* FretView.m */,
+				5C15A1FC198851AE0098ADF4 /* StrumView.h */,
+				5C15A1FD198851AE0098ADF4 /* StrumView.m */,
+				5C19E150198958C600AFBFE1 /* GestureViewController.h */,
+				5C19E151198958C600AFBFE1 /* GestureViewController.m */,
 				5CF31C38197F00380076A68D /* ViewController.h */,
 				5CF31C39197F00380076A68D /* ViewController.m */,
 				5CF31C3B197F00380076A68D /* Main.storyboard */,
@@ -106,6 +124,8 @@
 				5CF31C31197F00380076A68D /* Supporting Files */,
 				5CFA83801986A745007C2F20 /* MIDIHelper.h */,
 				5CFA83811986A745007C2F20 /* MIDIHelper.m */,
+				5C19E153198969E800AFBFE1 /* BaseStringView.h */,
+				5C19E154198969E800AFBFE1 /* BaseStringView.m */,
 			);
 			path = RealRaag;
 			sourceTree = "<group>";
@@ -243,10 +263,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C19E152198958C600AFBFE1 /* GestureViewController.m in Sources */,
 				5CF31C3A197F00380076A68D /* ViewController.m in Sources */,
 				5CF31C37197F00380076A68D /* AppDelegate.m in Sources */,
 				5CF31C56197F03CE0076A68D /* AudioController.m in Sources */,
+				5C15A1FE198851AE0098ADF4 /* StrumView.m in Sources */,
+				5C19E155198969E800AFBFE1 /* BaseStringView.m in Sources */,
 				5CFA83821986A745007C2F20 /* MIDIHelper.m in Sources */,
+				5C0BF06C19899E4F0069578B /* FretView.m in Sources */,
 				5CF31C34197F00380076A68D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,10 +340,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "D9609DE5-8968-4B3B-BEA3-7EC07B6BCD57";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos7.1;
 			};
 			name = Debug;
@@ -353,9 +377,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "D9609DE5-8968-4B3B-BEA3-7EC07B6BCD57";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos7.1;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -366,10 +390,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = RealRaag/RealRaag.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/**",
+				);
 				INFOPLIST_FILE = RealRaag/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				INFOPLIST_PREFIX_HEADER = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6338D6D8-E375-4009-8E66-59E25F8A7B84";
 			};
 			name = Debug;
 		};
@@ -378,10 +410,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = RealRaag/RealRaag.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/**",
+				);
 				INFOPLIST_FILE = RealRaag/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				INFOPLIST_PREFIX_HEADER = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6338D6D8-E375-4009-8E66-59E25F8A7B84";
 			};
 			name = Release;
 		};

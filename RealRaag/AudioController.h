@@ -15,4 +15,6 @@
 
 - (void) playNoteOn:(UInt32) noteNum;
 + (AudioController *)sharedInstance;
+- (void)startAudioController;
+
 @end

@@ -45,21 +45,13 @@
     
 }
 
-- (id)init
-{
-    self = [super init];
-    
-    if (!self) {
-        return nil;
-    }
+-(void)startAudioController{
     //TODO: DRIVER
     BOOL audioSessionActivated = [self setupAudioSession];
     NSAssert (audioSessionActivated == YES, @"unable to set up audio session.");
     [self createAUGraph];
     [self configureAndStartAudioProcessingGraph:self.processingGraph];
     [self loadAUPresets: self];
-    
-    return self;
 }
 
 #pragma mark - Core Audio Setup/Teardown
