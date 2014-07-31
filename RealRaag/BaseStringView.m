@@ -19,21 +19,6 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
- @property (nonatomic, readonly) CGFloat *stringOneStart;
- @property (nonatomic, readonly) CGFloat *stringOneEnd;
- @property (nonatomic, readonly) CGFloat *stringTwoStart;
- @property (nonatomic, readonly) CGFloat *stringTwoEnd;
- @property (nonatomic, readonly) CGFloat *stringThreeStart;
- @property (nonatomic, readonly) CGFloat *stringThreeEnd;
-
-}
-*/
-
 -(CGFloat)stringOneStart{
     return (SCREEN_WIDTH / 4) - (STRING_WIDTH / 2);
 }
@@ -57,5 +42,30 @@
 -(CGFloat)stringThreeEnd{
     return ((SCREEN_WIDTH / 4) * 3) + (STRING_WIDTH / 2);
 }
+
+-(CGFloat)fretOneStart{
+    return (317 / 4) - (STRING_WIDTH / 2);
+}
+
+-(CGFloat)fretOneEnd{
+    return (317 / 4) + (STRING_WIDTH / 2);
+}
+
+-(CGFloat)fretTwoStart{
+    return ((317 / 4) * 2) - (STRING_WIDTH / 2);
+}
+
+-(CGFloat)fretTwoEnd{
+    return ((317 / 4) * 2) + (STRING_WIDTH / 2);
+}
+
+-(CGFloat)fretThreeStart{
+    return ((317 / 4) * 3) - (STRING_WIDTH / 2);
+}
+
+-(CGFloat)fretThreeEnd{
+    return ((317 / 4) * 3) + (STRING_WIDTH / 2);
+}
+
 
 @end

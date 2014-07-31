@@ -16,16 +16,28 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
+        [self setup];
     }
     return self;
 }
-
+- (id)initWithCoder:(NSCoder *)aDecoder{
+    self = [super initWithCoder:aDecoder];
+    
+    if (self) {
+        [self setup];
+    }
+    return self;
+    
+}
+-(void)setup{
+    self.layer.borderWidth = 2;
+    self.layer.borderColor = [UIColor blackColor].CGColor;
+}
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     UITouch *theTouch = [touches anyObject];
     self.startPoint = [theTouch locationInView:self];
-    NSLog(@"(x,y) = %f %f", self.startPoint.x, self.startPoint.y);
+
     NSInteger stringIndex = -1;
 
     if (self.startPoint.x > [self stringOneStart] && self.startPoint.x < [self stringOneEnd]) {

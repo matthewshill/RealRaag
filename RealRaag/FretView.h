@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
+#import "BaseStringView.h"
 
-@interface FretView : UIView
+@protocol FretDelegate <NSObject>
 
+-(void)fretsPressed:(NSInteger)fretIndex;
+
+@end
+
+@interface FretView : BaseStringView
+@property (nonatomic, weak) id <FretDelegate> delegate;
 @end

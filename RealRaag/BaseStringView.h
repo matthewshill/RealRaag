@@ -16,5 +16,11 @@
 @property (nonatomic, readonly) CGFloat stringTwoEnd;
 @property (nonatomic, readonly) CGFloat stringThreeStart;
 @property (nonatomic, readonly) CGFloat stringThreeEnd;
+@property (nonatomic, readonly) CGFloat fretOneStart;
+@property (nonatomic, readonly) CGFloat fretOneEnd;
+@property (nonatomic, readonly) CGFloat fretTwoStart;
+@property (nonatomic, readonly) CGFloat fretTwoEnd;
+@property (nonatomic, readonly) CGFloat fretThreeStart;
+@property (nonatomic, readonly) CGFloat fretThreeEnd;
 
 @end
