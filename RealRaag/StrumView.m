@@ -27,14 +27,7 @@
     self.startPoint = [theTouch locationInView:self];
     NSLog(@"(x,y) = %f %f", self.startPoint.x, self.startPoint.y);
     NSInteger stringIndex = -1;
-    /*
-    NSLog(@"string one start %f", [[BaseStringView new] stringOneStart]);
-    NSLog(@"string one end %f", [[BaseStringView new] stringOneEnd]);
-    NSLog(@"string two start %f", [[BaseStringView new] stringTwoStart]);
-    NSLog(@"string two end %f", [[BaseStringView new] stringTwoEnd]);
-    NSLog(@"string three start %f", [[BaseStringView new] stringThreeStart]);
-    NSLog(@"string three end %f", [[BaseStringView new] stringThreeEnd]);
-    */
+
     if (self.startPoint.x > [self stringOneStart] && self.startPoint.x < [self stringOneEnd]) {
         stringIndex = 0;
     }
@@ -48,7 +41,7 @@
     }
     
     if (self.delegate) {
-        [self.delegate stringHit:stringIndex upStroke:false];
+        [self.delegate stringHit:stringIndex];
     }
     
 }
@@ -60,7 +53,7 @@
     
     //1st String Up Stroke
     if(prevLocation.x > [self stringOneEnd] && location.x < [self stringOneStart]){
-        stringIndex = 0;
+        stringIndex = 3;
     }
     //1st String Down Stroke
     if(prevLocation.x < [self stringOneStart] && location.x > [self stringOneEnd]){
@@ -68,7 +61,7 @@
     }
     //2nd String Up Stroke
     if(prevLocation.x > [self stringTwoEnd] && location.x < [self stringTwoStart]){
-        stringIndex = 1;
+        stringIndex = 4;
     }
     //2nd String Down Stroke
     if(prevLocation.x < [self stringTwoStart] && location.x > [self stringTwoEnd]){
@@ -76,7 +69,7 @@
     }
     //3rd String Up Stroke
     if(prevLocation.x > [self stringThreeEnd] && location.x < [self stringThreeStart]){
-        stringIndex = 2;
+        stringIndex = 5;
     }
     //3rd String Down Stroke
     if(prevLocation.x < [self stringThreeStart] && location.x > [self stringThreeEnd]){
@@ -84,7 +77,7 @@
     }
     
     if (self.delegate) {
-        [self.delegate stringHit:stringIndex upStroke:false];
+        [self.delegate stringHit:stringIndex];
     }
     
 }

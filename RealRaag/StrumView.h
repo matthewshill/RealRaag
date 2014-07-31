@@ -12,7 +12,7 @@
 
 @protocol StrumDelegate <NSObject>
 
--(void)stringHit:(NSInteger)stringIndex upStroke:(BOOL)upStroke;
+-(void)stringHit:(NSInteger)stringIndex;
 
 @end
 

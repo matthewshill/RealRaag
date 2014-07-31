@@ -31,7 +31,7 @@ NSUInteger *touchCount;
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
     NSUInteger touchCount = [touches count];
-    //NSLog(@"touch moved count: %lu", (unsigned long)touchCount);
+    NSLog(@"touch moved count: %lu", (unsigned long)touchCount);
 }
 
 /*

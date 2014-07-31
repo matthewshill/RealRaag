@@ -18,10 +18,16 @@
 @property (readwrite) AudioUnit samplerUnit1;
 @property (readwrite) AudioUnit samplerUnit2;
 @property (readwrite) AudioUnit samplerUnit3;
+@property (readwrite) AudioUnit samplerUnit4;
+@property (readwrite) AudioUnit samplerUnit5;
+@property (readwrite) AudioUnit samplerUnit6;
 @property (readwrite) AudioUnit ioUnit;
-@property (nonatomic) NSMutableArray *notes1;
-@property (nonatomic) NSMutableArray *notes2;
-@property (nonatomic) NSMutableArray *notes3;
+@property (nonatomic) NSMutableArray *string1;
+@property (nonatomic) NSMutableArray *string2;
+@property (nonatomic) NSMutableArray *string3;
+@property (nonatomic) NSMutableArray *string1Up;
+@property (nonatomic) NSMutableArray *string2Up;
+@property (nonatomic) NSMutableArray *string3Up;
 @property (nonatomic) AUNode mixerNode;
 
 - (OSStatus) loadSamplerFromAUPresetURL: (NSURL *) presetURL sampler:(AudioUnit)samplerUnit;
@@ -46,7 +52,6 @@
 }
 
 -(void)startAudioController{
-    //TODO: DRIVER
     BOOL audioSessionActivated = [self setupAudioSession];
     NSAssert (audioSessionActivated == YES, @"unable to set up audio session.");
     [self createAUGraph];
@@ -59,7 +64,7 @@
 -(BOOL) createAUGraph {
     
     OSStatus result = noErr;
-    AUNode samplerNode1, samplerNode2, samplerNode3, ioNode;
+    AUNode samplerNode1, samplerNode2, samplerNode3, samplerNode4, samplerNode5, samplerNode6, ioNode;
     AudioComponentDescription cd = {};
     
     cd.componentManufacturer = kAudioUnitManufacturer_Apple;
@@ -77,6 +82,9 @@
     result = AUGraphAddNode(self.processingGraph, &cd, &samplerNode1);
     result = AUGraphAddNode(self.processingGraph, &cd, &samplerNode2);
     result = AUGraphAddNode(self.processingGraph, &cd, &samplerNode3);
+    result = AUGraphAddNode(self.processingGraph, &cd, &samplerNode4);
+    result = AUGraphAddNode(self.processingGraph, &cd, &samplerNode5);
+    result = AUGraphAddNode(self.processingGraph, &cd, &samplerNode6);
     
     NSCAssert(result == noErr, @"Unable to add the Sampler unit to the audio processing graph. Error code: %d '%.4s'", (int) result, (const char *) &result);
     
@@ -111,12 +119,20 @@
     AUGraphConnectNodeInput(self.processingGraph, samplerNode1, 0, _mixerNode, 0);
     AUGraphConnectNodeInput(self.processingGraph, samplerNode2, 0, _mixerNode, 1);
     AUGraphConnectNodeInput(self.processingGraph, samplerNode3, 0, _mixerNode, 2);
-    AUGraphConnectNodeInput(self.processingGraph, _mixerNode, 0, ioNode, 0);
+    AUGraphConnectNodeInput(self.processingGraph, samplerNode4, 0, _mixerNode, 3);
+    AUGraphConnectNodeInput(self.processingGraph, samplerNode5, 0, _mixerNode, 4);
+    AUGraphConnectNodeInput(self.processingGraph, samplerNode6, 0, _mixerNode, 5);
+    AUGraphConnectNodeInput(self.processingGraph, _mixerNode, 0, ioNode, 0);;
+    
     
     //save Sampler Units
     result = AUGraphNodeInfo(self.processingGraph, samplerNode1, 0, &_samplerUnit1);
     result = AUGraphNodeInfo(self.processingGraph, samplerNode2, 0, &_samplerUnit2);
     result = AUGraphNodeInfo(self.processingGraph, samplerNode3, 0, &_samplerUnit3);
+    result = AUGraphNodeInfo(self.processingGraph, samplerNode4, 0, &_samplerUnit4);
+    result = AUGraphNodeInfo(self.processingGraph, samplerNode5, 0, &_samplerUnit5);
+    result = AUGraphNodeInfo(self.processingGraph, samplerNode6, 0, &_samplerUnit6);
+    
     NSCAssert(result == noErr, @"Unable to obtain a reference to the Sampler Unit. Error code %d '%.4s'", (int) result, (const char *)&result);
     //save I/O
     result = AUGraphNodeInfo(self.processingGraph, ioNode, 0, &_ioUnit);
@@ -146,6 +162,9 @@
     result = AudioUnitSetProperty(self.samplerUnit1, kAudioUnitProperty_SampleRate, kAudioUnitScope_Output, 0, &_graphSampleRate, sampleRatePropertySize);
     result = AudioUnitSetProperty(self.samplerUnit2, kAudioUnitProperty_SampleRate, kAudioUnitScope_Output, 0, &_graphSampleRate, sampleRatePropertySize);
     result = AudioUnitSetProperty(self.samplerUnit3, kAudioUnitProperty_SampleRate, kAudioUnitScope_Output, 0, &_graphSampleRate, sampleRatePropertySize);
+    result = AudioUnitSetProperty(self.samplerUnit4, kAudioUnitProperty_SampleRate, kAudioUnitScope_Output, 0, &_graphSampleRate, sampleRatePropertySize);
+    result = AudioUnitSetProperty(self.samplerUnit5, kAudioUnitProperty_SampleRate, kAudioUnitScope_Output, 0, &_graphSampleRate, sampleRatePropertySize);
+    result = AudioUnitSetProperty(self.samplerUnit6, kAudioUnitProperty_SampleRate, kAudioUnitScope_Output, 0, &_graphSampleRate, sampleRatePropertySize);
     
     NSAssert(result == noErr, @"AudioUnitSetProperty (set Sampler unit output stream sample rate). Error code: %d '%.4s", (int) result, (const char *) &result);
     
@@ -153,6 +172,9 @@
     result = AudioUnitSetProperty(self.samplerUnit1, kAudioUnitProperty_MaximumFramesPerSlice, kAudioUnitScope_Global, 0, &framesPerSlice, framesPerSlicePropertySize);
     result = AudioUnitSetProperty(self.samplerUnit2, kAudioUnitProperty_MaximumFramesPerSlice, kAudioUnitScope_Global, 0, &framesPerSlice, framesPerSlicePropertySize);
     result = AudioUnitSetProperty(self.samplerUnit3, kAudioUnitProperty_MaximumFramesPerSlice, kAudioUnitScope_Global, 0, &framesPerSlice, framesPerSlicePropertySize);
+    result = AudioUnitSetProperty(self.samplerUnit4, kAudioUnitProperty_MaximumFramesPerSlice, kAudioUnitScope_Global, 0, &framesPerSlice, framesPerSlicePropertySize);
+    result = AudioUnitSetProperty(self.samplerUnit5, kAudioUnitProperty_MaximumFramesPerSlice, kAudioUnitScope_Global, 0, &framesPerSlice, framesPerSlicePropertySize);
+    result = AudioUnitSetProperty(self.samplerUnit6, kAudioUnitProperty_MaximumFramesPerSlice, kAudioUnitScope_Global, 0, &framesPerSlice, framesPerSlicePropertySize);
     
     NSAssert(result == noErr, @"AudioUnitSetProperty (set Sampler unit max frames per slice). Error code: %d '%.4s'", (int) result, (const char *)&result);
     
@@ -198,8 +220,39 @@
     if(presetURL){
         NSLog(@"Attempting to load preset 3 '%@'\n", [presetURL description]);
     }
-    
+    else{
+        NSLog(@"COULD NOT GET PRESET PATH");
+    }
     [self loadSamplerFromAUPresetURL:presetURL sampler:_samplerUnit3];
+    
+    presetURL = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"rubab1stStringUpstroke" ofType:@"aupreset"]];
+    if(presetURL){
+        NSLog(@"Attempting to load preset 4 '%@'\n", [presetURL description]);
+    }
+    
+    [self loadSamplerFromAUPresetURL:presetURL sampler:_samplerUnit4];
+    
+    presetURL = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"rubab2ndStringUpstroke" ofType:@"aupreset"]];
+    if(presetURL){
+        NSLog(@"Attempting to load preset 5 '%@' \n", [presetURL description]);
+    }
+    else{
+        NSLog(@"COULD NOT GET PRESET PATH");
+    }
+    
+    [self loadSamplerFromAUPresetURL:presetURL sampler:_samplerUnit5];
+    
+    presetURL = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"rubab3rdStringUpstroke" ofType:@"aupreset"]];
+    
+    if(presetURL){
+        NSLog(@"Attempting to load preset 6 '%@' \n", [presetURL description]);
+    }
+    else{
+        NSLog(@"COULD NOT GET PRESET PATH");
+    }
+    
+    [self loadSamplerFromAUPresetURL:presetURL sampler:_samplerUnit6];
+    
 }
 
 - (OSStatus) loadSamplerFromAUPresetURL:(NSURL *)presetURL sampler:(AudioUnit)samplerUnit {
@@ -278,37 +331,49 @@
 
 - (void) playNoteOn:(UInt32)noteNum {
     
-    if(!_notes1){
-        self.notes1 = [[NSMutableArray alloc] initWithArray:[MIDIHelper notesForScale:MidiScaleCMaj register:MidiRegisterFull]];
+    /*if(!_string1){
+        self.string1 = [[NSMutableArray alloc] initWithArray:[MIDIHelper notesForScale:MidiScaleCMaj register:MidiRegisterFull]];
     }
-    if(!_notes2){
-        self.notes2 = [[NSMutableArray alloc] initWithArray:[MIDIHelper notesForScale:MidiScaleCMaj register:MidiRegisterFull]];
+    if(!_string2){
+        self.string2 = [[NSMutableArray alloc] initWithArray:[MIDIHelper notesForScale:MidiScaleCMaj register:MidiRegisterFull]];
     }
-    if (!_notes3) {
-        self.notes3 = [[NSMutableArray alloc] initWithArray:[MIDIHelper notesForScale:MidiScaleCMaj register:MidiRegisterFull]];
-    }
+    if (!_string3) {
+        self.string3 = [[NSMutableArray alloc] initWithArray:[MIDIHelper notesForScale:MidiScaleCMaj register:MidiRegisterFull]];
+    }*/
     
     AudioUnit *samplerUnit = nil;
-    NSArray *notes = nil;
+    //NSArray *notes = nil;
     
     NSInteger bus = floor(noteNum/1000) - 1;
     UInt32 note = (noteNum % 1000);
     
     if(bus == 0)
     {
-        notes = _notes1;
+        //notes = _string1;
         samplerUnit = &(_samplerUnit1);
     }
     if(bus == 1)
     {
-        notes = _notes2;
+        //notes = _string2;
         samplerUnit = &(_samplerUnit2);
     }
     
     if(bus == 2)
     {
-        notes = _notes3;
+        //notes = _string3;
         samplerUnit = &(_samplerUnit3);
+    }
+    
+    if (bus == 3) {
+        samplerUnit = &(_samplerUnit4);
+    }
+    
+    if (bus == 4) {
+        samplerUnit = &(_samplerUnit5);
+    }
+    
+    if (bus == 5) {
+        samplerUnit = &(_samplerUnit6);
     }
     
     UInt32 noteCommand = 0x9 << 4 | 0;
