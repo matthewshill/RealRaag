@@ -15,6 +15,8 @@
 
 @property (nonatomic) IBOutlet StrumView *strumView;
 @property (nonatomic) IBOutlet FretView *fretView;
+@property (nonatomic) int fret;
+@property (nonatomic) NSInteger string;
 
 @end
 

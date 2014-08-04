@@ -23,4 +23,20 @@
 @property (nonatomic, readonly) CGFloat fretThreeStart;
 @property (nonatomic, readonly) CGFloat fretThreeEnd;
 
+typedef enum {
+    FretOpen=0,
+    FretOne,
+    FretTwo,
+    FretThree,
+    FretFour
+    
+} Fret;
+
+typedef enum {
+    StringOne=0,
+    StringTwo,
+    StringThree
+} String;
+
 @end
+

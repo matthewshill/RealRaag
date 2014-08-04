@@ -32,7 +32,7 @@ NSUInteger *touchCount;
     CGFloat height = self.bounds.size.height;
     //NSLog(@"screen height: %f", height);
     
-    if (startPoint.y < [self fretOneStart] && startPoint.x < [self stringOneStart]) {
+    /*if (startPoint.y < [self fretOneStart] && startPoint.x < [self stringOneStart]) {
         NSLog(@"FRET ONE - STRING ONE");
     }
     if ((startPoint.y > [self fretOneEnd] && startPoint.y < [self fretTwoStart]) && startPoint.x < [self stringOneStart]) {
@@ -43,6 +43,31 @@ NSUInteger *touchCount;
     }
     if((startPoint.y > [self fretThreeEnd]) && startPoint.x < [self stringOneStart]){
         NSLog(@"FRET FOUR - STRING ONE");
+    }*/
+    
+    Fret fretIndex = FretOpen;
+    
+    NSInteger fretLength = (self.bounds.size.height / 4);
+    NSInteger fret = (startPoint.y / fretLength);
+    
+    NSInteger stringLength = (self.bounds.size.width / 3);
+    NSInteger string = (startPoint.x / stringLength);
+
+    
+    if (fret == 0) {
+        fretIndex = FretOne;
+    }
+    if (fret == 1) {
+        fretIndex = FretTwo;
+    }
+    if(fret == 2) {
+        fretIndex = FretThree;
+    }
+    if (fret == 3) {
+        fretIndex = FretFour;
+    }
+    if(self.delegate){
+        [self.delegate fretsPressed:fretIndex stringIndex:string];
     }
     
 }
@@ -64,6 +89,35 @@ NSUInteger *touchCount;
     if(startPoint.y > [self fretThreeEnd]){
         NSLog(@"FRET FOUR");
     }*/
+    Fret fretIndex = FretOpen;
+    NSInteger fretLength = (self.bounds.size.height / 4);
+    NSInteger fret = (startPoint.y / fretLength);
+    
+    NSInteger stringLength = (self.bounds.size.width / 3);
+    NSInteger string = (startPoint.x / stringLength);
+    
+    if (fret == 0) {
+        fretIndex = FretOne;
+    }
+    if (fret == 1) {
+        fretIndex = FretTwo;
+    }
+    if(fret == 2) {
+        fretIndex = FretThree;
+    }
+    if (fret == 3) {
+        fretIndex = FretFour;
+    }
+    
+    if(self.delegate){
+        [self.delegate fretsPressed:fretIndex stringIndex:string];
+    }
+}
+
+-(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event{
+    if(self.delegate){
+        [self.delegate fretsPressed:FretOpen stringIndex:-1];
+    }
 }
 
 /*

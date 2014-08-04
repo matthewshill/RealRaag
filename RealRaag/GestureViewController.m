@@ -8,8 +8,7 @@
 
 #import "GestureViewController.h"
 
-@interface GestureViewController () <StrumDelegate>
-
+@interface GestureViewController () <StrumDelegate, FretDelegate>
 @end
 
 @implementation GestureViewController
@@ -17,6 +16,7 @@
 {
     [super viewDidLoad];
     _strumView.delegate = self;
+    _fretView.delegate  = self;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -30,7 +30,7 @@
 }
 
 -(void)stringHit:(NSInteger)stringIndex{
-    if (stringIndex == 0) {
+    /*if (stringIndex == 0) {
         [[AudioController sharedInstance] playNoteOn:3048];
     }
     if (stringIndex == 1) {
@@ -47,12 +47,99 @@
     }
     if (stringIndex == 5) {
         [[AudioController sharedInstance] playNoteOn:6048];
+    }*/
+    NSInteger note = 0;
+    switch (stringIndex) {
+        case 0:
+            if (self.string == 0) {
+                note = (3048 + (2 * self.fret));
+                if (self.fret == 3 || self.fret == 4) {
+                    note--;
+                }
+                [[AudioController sharedInstance] playNoteOn:note];
+            }
+            else{
+                [[AudioController sharedInstance] playNoteOn:3048];
+            }
+            break;
+        case 1:
+            if (self.string == 1) {
+                note = (2048 + (2 * self.fret));
+                if (self.fret == 3 || self.fret == 4) {
+                    note--;
+                }
+                [[AudioController sharedInstance] playNoteOn:note];
+            }
+            else{
+                [[AudioController sharedInstance] playNoteOn:2048];
+            }
+            break;
+        case 2:
+            if(self.string == 2){
+                note = (1048 + (2 * self.fret));
+                if (self.fret == 3 || self.fret ==4) {
+                    note--;
+                }
+                [[AudioController sharedInstance] playNoteOn:note];
+            }
+            else{
+                [[AudioController sharedInstance] playNoteOn:1048];
+            }
+            break;
+        case 3:
+            if (self.string == 0) {
+                note = (4048 + (2 * self.fret));
+                if (self.fret == 3 || self.fret == 4) {
+                    note--;
+                }
+                [[AudioController sharedInstance] playNoteOn:note];
+            }
+            else{
+                [[AudioController sharedInstance] playNoteOn:4048];
+            }
+            break;
+        case 4:
+            if (self.string == 1) {
+                note = (5048 + (2 * self.fret));
+                if (self.fret == 3 || self.fret == 4) {
+                    note--;
+                }
+                [[AudioController sharedInstance] playNoteOn:note];
+            }
+            else{
+                [[AudioController sharedInstance] playNoteOn:5048];
+            }
+            break;
+        case 5:
+            if (self.string == 2) {
+                note = (6048 + (2 * self.fret));
+                if(self.fret == 3 || self.fret == 4){
+                    note--;
+                }
+                [[AudioController sharedInstance] playNoteOn:note];
+            }
+            else{
+                [[AudioController sharedInstance] playNoteOn:6048];
+            }
+            break;
+            
+        default:
+            break;
     }
+    
+    NSLog(@"(fret, string) %d %d", self.fret, self.string);
+    NSLog(@"string index: %d", stringIndex);
 }
 
--(void)fretsPressed:(NSInteger)fretIndex{
-    
+-(void)fretsPressed:(Fret)fretIndex stringIndex:(NSInteger)stringIndex{
+    [self setFret:fretIndex setString:stringIndex];
 }
+
+-(void)setFret:(NSInteger)fret setString:(NSInteger)string{
+    self.fret =  fret;
+    self.string = string;
+}
+
 
 /*
 #pragma mark - Navigation

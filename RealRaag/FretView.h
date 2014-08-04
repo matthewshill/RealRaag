@@ -12,7 +12,7 @@
 
 @protocol FretDelegate <NSObject>
 
--(void)fretsPressed:(NSInteger)fretIndex;
+-(void)fretsPressed:(Fret)fretIndex stringIndex:(NSInteger)stringIndex;
 
 @end
 
