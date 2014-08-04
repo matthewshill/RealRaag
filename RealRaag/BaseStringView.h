@@ -24,12 +24,11 @@
 @property (nonatomic, readonly) CGFloat fretThreeEnd;
 
 typedef enum {
-    FretOpen=0,
+    FretOpen=-1,
     FretOne,
     FretTwo,
     FretThree,
     FretFour
-    
 } Fret;
 
 typedef enum {

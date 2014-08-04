@@ -12,11 +12,69 @@
 @end
 
 @implementation GestureViewController
+@synthesize imageView;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSInteger fret_height = (self.view.bounds.size.height - (STRUM_HEIGHT + 64)) / 4;
+    NSInteger fret_width = self.view.bounds.size.width / 3;
+    for (int string = 0; string < 3; string++) {
+        for(int fret = 0; fret < 4; fret++){
+            CGRect rect = CGRectMake(string * fret_width, fret_height * fret + 64, fret_width, fret_height);
+            imageView = [[UIImageView alloc] initWithFrame:rect];
+            [imageView setImage:[UIImage imageNamed:@"test.jpg"]];
+            [self.view addSubview:imageView];
+        }
+    }
+    
+    self.fretView = [FretView new];
+    self.strumView = [StrumView new];
+    [self.view addSubview:_fretView];
+    [self.view addSubview:_strumView];
+    NSDictionary *viewsDict = @{@"fret":_fretView, @"strum":_strumView};
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-64-[fret]-0-[strum(108)]-0-|" options:0 metrics:nil views:viewsDict]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[fret]-0-|" options:0 metrics:nil views:viewsDict]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[strum]-0-|" options:0 metrics:nil views:viewsDict]];
+    
+    _strumView.translatesAutoresizingMaskIntoConstraints = NO;
+    _fretView.translatesAutoresizingMaskIntoConstraints  =NO;
     _strumView.delegate = self;
     _fretView.delegate  = self;
+    [_fretView setBackgroundColor:[UIColor clearColor]];
+    
+
+    /*CGRect rect = CGRectMake(0, fret_height, fret_width, fret_height);
+    imageView = [[UIImageView alloc] initWithFrame:rect];
+    [imageView setImage:[UIImage imageNamed:@"test.jpg"]];
+    [self.view addSubview:imageView];
+    
+    rect = CGRectMake(0, (fret_height * 2), fret_width, fret_height);
+    imageView = [[UIImageView alloc] initWithFrame:rect];
+    [imageView setImage:[UIImage imageNamed:@"test.jpg"]];
+    [self.view addSubview:imageView];
+    
+    rect = CGRectMake(0, (fret_height * 3), fret_width, fret_height);
+    imageView = [[UIImageView alloc] initWithFrame:rect];
+    [imageView setImage:[UIImage imageNamed:@"test.jpg"]];
+    [self.view addSubview:imageView];
+    
+    rect = CGRectMake(0, (fret_height * 4), fret_width, fret_height);
+    imageView = [[UIImageView alloc] initWithFrame:rect];
+    [imageView setImage:[UIImage imageNamed:@"test.jpg"]];
+    [self.view addSubview:imageView];
+    
+    rect = CGRectMake(fret_width, fret_height, fret_width, fret_height);
+    imageView = [[UIImageView alloc] initWithFrame:rect];
+    [imageView setImage:[UIImage imageNamed:@"test.jpg"]];
+    [self.view addSubview:imageView];
+    
+    rect = CGRectMake(fret_width * 2, fret_height, fret_width, fret_height);
+    imageView = [[UIImageView alloc] initWithFrame:rect];
+    [imageView setImage:[UIImage imageNamed:@"test.jpg"]];
+    [self.view addSubview:imageView];*/
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -30,24 +88,6 @@
 }
 
 -(void)stringHit:(NSInteger)stringIndex{
-    /*if (stringIndex == 0) {
-        [[AudioController sharedInstance] playNoteOn:3048];
-    }
-    if (stringIndex == 1) {
-        [[AudioController sharedInstance] playNoteOn:2048];
-    }
-    if (stringIndex == 2) {
-        [[AudioController sharedInstance] playNoteOn:1048];
-    }
-    if (stringIndex == 3) {
-        [[AudioController sharedInstance] playNoteOn:4048];
-    }
-    if (stringIndex == 4) {
-        [[AudioController sharedInstance] playNoteOn:5048];
-    }
-    if (stringIndex == 5) {
-        [[AudioController sharedInstance] playNoteOn:6048];
-    }*/
     NSInteger note = 0;
     switch (stringIndex) {
         case 0:

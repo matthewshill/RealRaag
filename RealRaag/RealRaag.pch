@@ -13,6 +13,7 @@
 #define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define STRING_WIDTH 3
 #define FRET_HEIGHT [[UIView FretView] bounds].size.height
+#define STRUM_HEIGHT 108
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
