@@ -13,18 +13,22 @@
 
 @implementation GestureViewController
 @synthesize imageView;
-
+@synthesize imageArray;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     NSInteger fret_height = (self.view.bounds.size.height - (STRUM_HEIGHT + 64)) / 4;
     NSInteger fret_width = self.view.bounds.size.width / 3;
+    imageArray = [[NSMutableArray alloc] init];
+    
     for (int string = 0; string < 3; string++) {
         for(int fret = 0; fret < 4; fret++){
             CGRect rect = CGRectMake(string * fret_width, fret_height * fret + 64, fret_width, fret_height);
             imageView = [[UIImageView alloc] initWithFrame:rect];
-            [imageView setImage:[UIImage imageNamed:@"test.jpg"]];
+            [imageView setImage:[UIImage imageNamed:@"fret.jpg"]];
             [self.view addSubview:imageView];
+            imageView.userInteractionEnabled = YES;
+            [imageArray addObject:imageView];
         }
     }
     
@@ -42,38 +46,7 @@
     _fretView.translatesAutoresizingMaskIntoConstraints  =NO;
     _strumView.delegate = self;
     _fretView.delegate  = self;
-    [_fretView setBackgroundColor:[UIColor clearColor]];
-    
-
-    /*CGRect rect = CGRectMake(0, fret_height, fret_width, fret_height);
-    imageView = [[UIImageView alloc] initWithFrame:rect];
-    [imageView setImage:[UIImage imageNamed:@"test.jpg"]];
-    [self.view addSubview:imageView];
-    
-    rect = CGRectMake(0, (fret_height * 2), fret_width, fret_height);
-    imageView = [[UIImageView alloc] initWithFrame:rect];
-    [imageView setImage:[UIImage imageNamed:@"test.jpg"]];
-    [self.view addSubview:imageView];
-    
-    rect = CGRectMake(0, (fret_height * 3), fret_width, fret_height);
-    imageView = [[UIImageView alloc] initWithFrame:rect];
-    [imageView setImage:[UIImage imageNamed:@"test.jpg"]];
-    [self.view addSubview:imageView];
-    
-    rect = CGRectMake(0, (fret_height * 4), fret_width, fret_height);
-    imageView = [[UIImageView alloc] initWithFrame:rect];
-    [imageView setImage:[UIImage imageNamed:@"test.jpg"]];
-    [self.view addSubview:imageView];
-    
-    rect = CGRectMake(fret_width, fret_height, fret_width, fret_height);
-    imageView = [[UIImageView alloc] initWithFrame:rect];
-    [imageView setImage:[UIImage imageNamed:@"test.jpg"]];
-    [self.view addSubview:imageView];
-    
-    rect = CGRectMake(fret_width * 2, fret_height, fret_width, fret_height);
-    imageView = [[UIImageView alloc] initWithFrame:rect];
-    [imageView setImage:[UIImage imageNamed:@"test.jpg"]];
-    [self.view addSubview:imageView];*/
+    //[_fretView setBackgroundColor:[UIColor clearColor]];
     
 }
 
@@ -167,19 +140,33 @@
             break;
     }
     
-    NSLog(@"(fret, string) %d %d", self.fret, self.string);
-    NSLog(@"string index: %d", stringIndex);
+    NSLog(@"(fret, string) %d %ld", self.fret, (long)self.string);
+    NSLog(@"string index: %ld", (long)stringIndex);
 }
 
 -(void)fretsPressed:(Fret)fretIndex stringIndex:(NSInteger)stringIndex{
     [self setFret:fretIndex setString:stringIndex];
+    NSLog(@"TOUCHEDD");
+    
+    NSLog(@"fret touched: %d %d", fretIndex, stringIndex);
+
+    for(UIImageView *image in imageArray){
+        CGFloat f = floor(image.frame.origin.y / image.bounds.size.height) + 1;
+        CGFloat s = floor(image.frame.origin.x / 100);
+        if (f==fretIndex && s==stringIndex) {
+            [image setImage:[UIImage imageNamed:@"fretPressed.jpg"]];
+        }
+        else{
+            [image setImage:[UIImage imageNamed:@"fret.jpg"]];
+        }
+    }
+
 }
 
 -(void)setFret:(NSInteger)fret setString:(NSInteger)string{
     self.fret =  fret;
     self.string = string;
 }
-
 
 /*
 #pragma mark - Navigation

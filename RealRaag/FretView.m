@@ -31,6 +31,7 @@ NSUInteger *touchCount;
 }
 -(void)setup{
     self.userInteractionEnabled = YES;
+    self.multipleTouchEnabled = YES;
     self.layer.borderColor = [UIColor purpleColor].CGColor;
     self.layer.borderWidth = 2;
 }
@@ -43,7 +44,7 @@ NSUInteger *touchCount;
     //NSLog(@"tap count: %lu", (unsigned long)tapCount);
     CGPoint startPoint = [[touches anyObject] locationInView:self];
     //NSLog(@"(x,y) = %f %f", startPoint.x, startPoint.y);
-    CGFloat height = self.bounds.size.height;
+    //CGFloat height = self.bounds.size.height;
     
     //Fret fretIndex = FretOpen;
     

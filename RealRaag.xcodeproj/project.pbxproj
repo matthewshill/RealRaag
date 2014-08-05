@@ -18,7 +18,8 @@
 		5C869D5E198A9E46001DD09C /* rubab1stStringUpstroke.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 5C869D5B198A9E46001DD09C /* rubab1stStringUpstroke.aupreset */; };
 		5C869D5F198A9E46001DD09C /* rubab2ndStringUpstroke.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 5C869D5C198A9E46001DD09C /* rubab2ndStringUpstroke.aupreset */; };
 		5C869D60198A9E46001DD09C /* rubab3rdStringUpstroke.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 5C869D5D198A9E46001DD09C /* rubab3rdStringUpstroke.aupreset */; };
-		5CA4BFFE19901FB500D5069E /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CA4BFFD19901FB500D5069E /* test.jpg */; };
+		5C97673D199140850023FC23 /* fret.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C97673B199140850023FC23 /* fret.jpg */; };
+		5C97673E199140850023FC23 /* fretPressed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C97673C199140850023FC23 /* fretPressed.jpg */; };
 		5CF31C34197F00380076A68D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF31C33197F00380076A68D /* main.m */; };
 		5CF31C37197F00380076A68D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF31C36197F00380076A68D /* AppDelegate.m */; };
 		5CF31C3A197F00380076A68D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF31C39197F00380076A68D /* ViewController.m */; };
@@ -56,7 +57,8 @@
 		5C869D5B198A9E46001DD09C /* rubab1stStringUpstroke.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rubab1stStringUpstroke.aupreset; sourceTree = "<group>"; };
 		5C869D5C198A9E46001DD09C /* rubab2ndStringUpstroke.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rubab2ndStringUpstroke.aupreset; sourceTree = "<group>"; };
 		5C869D5D198A9E46001DD09C /* rubab3rdStringUpstroke.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rubab3rdStringUpstroke.aupreset; sourceTree = "<group>"; };
-		5CA4BFFD19901FB500D5069E /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = test.jpg; path = Images.xcassets/test.jpg; sourceTree = "<group>"; };
+		5C97673B199140850023FC23 /* fret.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fret.jpg; path = Images.xcassets/fret.jpg; sourceTree = "<group>"; };
+		5C97673C199140850023FC23 /* fretPressed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fretPressed.jpg; path = Images.xcassets/fretPressed.jpg; sourceTree = "<group>"; };
 		5CF31C2E197F00380076A68D /* RealRaag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealRaag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF31C32197F00380076A68D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CF31C33197F00380076A68D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -141,7 +143,8 @@
 		5CF31C31197F00380076A68D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5CA4BFFD19901FB500D5069E /* test.jpg */,
+				5C97673B199140850023FC23 /* fret.jpg */,
+				5C97673C199140850023FC23 /* fretPressed.jpg */,
 				5C869D5B198A9E46001DD09C /* rubab1stStringUpstroke.aupreset */,
 				5C869D5C198A9E46001DD09C /* rubab2ndStringUpstroke.aupreset */,
 				5C869D5D198A9E46001DD09C /* rubab3rdStringUpstroke.aupreset */,
@@ -253,14 +256,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C7AC15E19871995003F5940 /* Sounds in Resources */,
-				5CA4BFFE19901FB500D5069E /* test.jpg in Resources */,
 				5CF31C3D197F00380076A68D /* Main.storyboard in Resources */,
 				5C869D5F198A9E46001DD09C /* rubab2ndStringUpstroke.aupreset in Resources */,
 				5CF31C3F197F00380076A68D /* Images.xcassets in Resources */,
 				5C7AC15C1987138F003F5940 /* rubab3rdString.aupreset in Resources */,
 				5C7AC15B1987138F003F5940 /* rubab2ndString.aupreset in Resources */,
+				5C97673D199140850023FC23 /* fret.jpg in Resources */,
 				5C7AC15A1987138F003F5940 /* rubab1stString.aupreset in Resources */,
 				5C869D5E198A9E46001DD09C /* rubab1stStringUpstroke.aupreset in Resources */,
+				5C97673E199140850023FC23 /* fretPressed.jpg in Resources */,
 				5C869D60198A9E46001DD09C /* rubab3rdStringUpstroke.aupreset in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,7 +363,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "73EAE0EA-1B89-418A-823A-0EF5DC63D5D6";
 				SDKROOT = iphoneos7.1;
 			};
 			name = Debug;
@@ -395,7 +399,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "73EAE0EA-1B89-418A-823A-0EF5DC63D5D6";
 				SDKROOT = iphoneos7.1;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -406,6 +410,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matt Hill (S8NG58V3C2)";
 				GCC_PREFIX_HEADER = RealRaag/RealRaag.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -426,6 +431,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matt Hill (S8NG58V3C2)";
 				GCC_PREFIX_HEADER = RealRaag/RealRaag.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",

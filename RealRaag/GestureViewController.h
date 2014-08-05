@@ -18,6 +18,7 @@
 @property (nonatomic) int fret;
 @property (nonatomic) NSInteger string;
 @property (nonatomic) UIImageView *imageView;
+@property (nonatomic, copy) NSMutableArray *imageArray;
 
 @end
 
