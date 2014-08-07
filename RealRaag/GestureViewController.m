@@ -17,13 +17,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSInteger fret_height = (self.view.bounds.size.height - (STRUM_HEIGHT + 64)) / 4;
+    NSInteger fret_height = (self.view.bounds.size.height - (STRUM_HEIGHT)) / 4;
     NSInteger fret_width = self.view.bounds.size.width / 3;
     imageArray = [[NSMutableArray alloc] init];
     
     for (int string = 0; string < 3; string++) {
         for(int fret = 0; fret < 4; fret++){
-            CGRect rect = CGRectMake(string * fret_width, fret_height * fret + 64, fret_width, fret_height);
+            CGRect rect = CGRectMake(string * fret_width, fret_height * fret, fret_width, fret_height);
             imageView = [[UIImageView alloc] initWithFrame:rect];
             [imageView setImage:[UIImage imageNamed:@"fret.jpg"]];
             [self.view addSubview:imageView];
@@ -31,22 +31,23 @@
             [imageArray addObject:imageView];
         }
     }
-    
+    //set up custom UIViews
     self.fretView = [FretView new];
     self.strumView = [StrumView new];
     [self.view addSubview:_fretView];
     [self.view addSubview:_strumView];
     NSDictionary *viewsDict = @{@"fret":_fretView, @"strum":_strumView};
     
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-64-[fret]-0-[strum(108)]-0-|" options:0 metrics:nil views:viewsDict]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[fret]-0-[strum(110)]-0-|" options:0 metrics:nil views:viewsDict]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[fret]-0-|" options:0 metrics:nil views:viewsDict]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[strum]-0-|" options:0 metrics:nil views:viewsDict]];
     
     _strumView.translatesAutoresizingMaskIntoConstraints = NO;
-    _fretView.translatesAutoresizingMaskIntoConstraints  =NO;
+    _fretView.translatesAutoresizingMaskIntoConstraints  = NO;
     _strumView.delegate = self;
     _fretView.delegate  = self;
-    //[_fretView setBackgroundColor:[UIColor clearColor]];
+    //hide nav bar
+    self.navigationController.navigationBarHidden = YES;
     
 }
 
@@ -58,6 +59,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(BOOL)prefersStatusBarHidden{
+    return YES;
 }
 
 -(void)stringHit:(NSInteger)stringIndex{
@@ -164,8 +169,8 @@
 }
 
 -(void)setFret:(NSInteger)fret setString:(NSInteger)string{
-    self.fret =  fret;
     self.string = string;
+    self.fret = fret;
 }
 
 /*

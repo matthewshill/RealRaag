@@ -11,6 +11,9 @@
 		5C15A1FE198851AE0098ADF4 /* StrumView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C15A1FD198851AE0098ADF4 /* StrumView.m */; };
 		5C19E152198958C600AFBFE1 /* GestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C19E151198958C600AFBFE1 /* GestureViewController.m */; };
 		5C19E155198969E800AFBFE1 /* BaseStringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C19E154198969E800AFBFE1 /* BaseStringView.m */; };
+		5C3A307F19929D8B00417625 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3A307E19929D8B00417625 /* HomeViewController.m */; };
+		5C3A30841992B2DB00417625 /* rubab1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C3A30831992B2DB00417625 /* rubab1.jpg */; };
+		5C3A308A1992B7A000417625 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3A30891992B7A000417625 /* HistoryViewController.m */; };
 		5C7AC15A1987138F003F5940 /* rubab1stString.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 5C7AC1571987138E003F5940 /* rubab1stString.aupreset */; };
 		5C7AC15B1987138F003F5940 /* rubab2ndString.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 5C7AC1581987138F003F5940 /* rubab2ndString.aupreset */; };
 		5C7AC15C1987138F003F5940 /* rubab3rdString.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 5C7AC1591987138F003F5940 /* rubab3rdString.aupreset */; };
@@ -20,6 +23,9 @@
 		5C869D60198A9E46001DD09C /* rubab3rdStringUpstroke.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 5C869D5D198A9E46001DD09C /* rubab3rdStringUpstroke.aupreset */; };
 		5C97673D199140850023FC23 /* fret.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C97673B199140850023FC23 /* fret.jpg */; };
 		5C97673E199140850023FC23 /* fretPressed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C97673C199140850023FC23 /* fretPressed.jpg */; };
+		5CACE3FC1993C1DA001B2461 /* rubabHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CACE3FB1993C1DA001B2461 /* rubabHistory.txt */; };
+		5CC51A691993EF4D004FAF71 /* dismiss.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC51A681993EF4D004FAF71 /* dismiss.png */; };
+		5CC51A6C1993F424004FAF71 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC51A6B1993F424004FAF71 /* PhotoViewController.m */; };
 		5CF31C34197F00380076A68D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF31C33197F00380076A68D /* main.m */; };
 		5CF31C37197F00380076A68D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF31C36197F00380076A68D /* AppDelegate.m */; };
 		5CF31C3A197F00380076A68D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF31C39197F00380076A68D /* ViewController.m */; };
@@ -49,6 +55,11 @@
 		5C19E151198958C600AFBFE1 /* GestureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureViewController.m; sourceTree = "<group>"; };
 		5C19E153198969E800AFBFE1 /* BaseStringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseStringView.h; sourceTree = "<group>"; };
 		5C19E154198969E800AFBFE1 /* BaseStringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseStringView.m; sourceTree = "<group>"; };
+		5C3A307D19929D8B00417625 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		5C3A307E19929D8B00417625 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		5C3A30831992B2DB00417625 /* rubab1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rubab1.jpg; sourceTree = "<group>"; };
+		5C3A30881992B7A000417625 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryViewController.h; path = ../HistoryViewController.h; sourceTree = "<group>"; };
+		5C3A30891992B7A000417625 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryViewController.m; path = ../HistoryViewController.m; sourceTree = "<group>"; };
 		5C4BD9711981596200A31AF4 /* RealRaag.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealRaag.pch; sourceTree = "<group>"; };
 		5C7AC1571987138E003F5940 /* rubab1stString.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rubab1stString.aupreset; sourceTree = "<group>"; };
 		5C7AC1581987138F003F5940 /* rubab2ndString.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rubab2ndString.aupreset; sourceTree = "<group>"; };
@@ -59,6 +70,10 @@
 		5C869D5D198A9E46001DD09C /* rubab3rdStringUpstroke.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rubab3rdStringUpstroke.aupreset; sourceTree = "<group>"; };
 		5C97673B199140850023FC23 /* fret.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fret.jpg; path = Images.xcassets/fret.jpg; sourceTree = "<group>"; };
 		5C97673C199140850023FC23 /* fretPressed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fretPressed.jpg; path = Images.xcassets/fretPressed.jpg; sourceTree = "<group>"; };
+		5CACE3FB1993C1DA001B2461 /* rubabHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rubabHistory.txt; sourceTree = "<group>"; };
+		5CC51A681993EF4D004FAF71 /* dismiss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dismiss.png; sourceTree = "<group>"; };
+		5CC51A6A1993F424004FAF71 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		5CC51A6B1993F424004FAF71 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		5CF31C2E197F00380076A68D /* RealRaag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealRaag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF31C32197F00380076A68D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CF31C33197F00380076A68D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -123,6 +138,12 @@
 				5CF31C36197F00380076A68D /* AppDelegate.m */,
 				5C0BF06A19899E4F0069578B /* FretView.h */,
 				5C0BF06B19899E4F0069578B /* FretView.m */,
+				5C3A30881992B7A000417625 /* HistoryViewController.h */,
+				5C3A30891992B7A000417625 /* HistoryViewController.m */,
+				5C3A307D19929D8B00417625 /* HomeViewController.h */,
+				5C3A307E19929D8B00417625 /* HomeViewController.m */,
+				5CC51A6A1993F424004FAF71 /* PhotoViewController.h */,
+				5CC51A6B1993F424004FAF71 /* PhotoViewController.m */,
 				5C15A1FC198851AE0098ADF4 /* StrumView.h */,
 				5C15A1FD198851AE0098ADF4 /* StrumView.m */,
 				5C19E150198958C600AFBFE1 /* GestureViewController.h */,
@@ -143,6 +164,9 @@
 		5CF31C31197F00380076A68D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5CC51A681993EF4D004FAF71 /* dismiss.png */,
+				5CACE3FB1993C1DA001B2461 /* rubabHistory.txt */,
+				5C3A30831992B2DB00417625 /* rubab1.jpg */,
 				5C97673B199140850023FC23 /* fret.jpg */,
 				5C97673C199140850023FC23 /* fretPressed.jpg */,
 				5C869D5B198A9E46001DD09C /* rubab1stStringUpstroke.aupreset */,
@@ -258,6 +282,7 @@
 				5C7AC15E19871995003F5940 /* Sounds in Resources */,
 				5CF31C3D197F00380076A68D /* Main.storyboard in Resources */,
 				5C869D5F198A9E46001DD09C /* rubab2ndStringUpstroke.aupreset in Resources */,
+				5CACE3FC1993C1DA001B2461 /* rubabHistory.txt in Resources */,
 				5CF31C3F197F00380076A68D /* Images.xcassets in Resources */,
 				5C7AC15C1987138F003F5940 /* rubab3rdString.aupreset in Resources */,
 				5C7AC15B1987138F003F5940 /* rubab2ndString.aupreset in Resources */,
@@ -265,6 +290,8 @@
 				5C7AC15A1987138F003F5940 /* rubab1stString.aupreset in Resources */,
 				5C869D5E198A9E46001DD09C /* rubab1stStringUpstroke.aupreset in Resources */,
 				5C97673E199140850023FC23 /* fretPressed.jpg in Resources */,
+				5C3A30841992B2DB00417625 /* rubab1.jpg in Resources */,
+				5CC51A691993EF4D004FAF71 /* dismiss.png in Resources */,
 				5C869D60198A9E46001DD09C /* rubab3rdStringUpstroke.aupreset in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,10 +313,13 @@
 				5C19E152198958C600AFBFE1 /* GestureViewController.m in Sources */,
 				5CF31C3A197F00380076A68D /* ViewController.m in Sources */,
 				5CF31C37197F00380076A68D /* AppDelegate.m in Sources */,
+				5C3A307F19929D8B00417625 /* HomeViewController.m in Sources */,
+				5C3A308A1992B7A000417625 /* HistoryViewController.m in Sources */,
 				5CF31C56197F03CE0076A68D /* AudioController.m in Sources */,
 				5C15A1FE198851AE0098ADF4 /* StrumView.m in Sources */,
 				5C19E155198969E800AFBFE1 /* BaseStringView.m in Sources */,
 				5CFA83821986A745007C2F20 /* MIDIHelper.m in Sources */,
+				5CC51A6C1993F424004FAF71 /* PhotoViewController.m in Sources */,
 				5C0BF06C19899E4F0069578B /* FretView.m in Sources */,
 				5CF31C34197F00380076A68D /* main.m in Sources */,
 			);
