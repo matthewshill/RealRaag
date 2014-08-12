@@ -29,13 +29,28 @@
         for(int fret = 0; fret < 4; fret++){
             CGRect rect = CGRectMake(string * fret_width, fret_height * fret + 44, fret_width, fret_height);
             _imageView = [[UIImageView alloc] initWithFrame:rect];
-            [_imageView setImage:[UIImage imageNamed:@"fret.jpg"]];
+            [_imageView setImage:[UIImage imageNamed:@"string.jpg"]];
             [self.view addSubview:_imageView];
             _imageView.userInteractionEnabled = YES;
             [_imageArray addObject:_imageView];
         }
     }
+    //setup strum images and animation
+    _stringOneImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 460, fret_width, fret_height + 2)];
+    [_stringOneImage setImage:[UIImage imageNamed:@"string.jpg"]];
     
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(animateString)];
+    [_stringOneImage addGestureRecognizer:swipe];
+    [self.view addSubview:_stringOneImage];
+    
+    _stringTwoImage = [[UIImageView alloc] initWithFrame:CGRectMake(106, 460, fret_width, fret_height + 2)];
+    [_stringTwoImage setImage:[UIImage imageNamed:@"string.jpg"]];
+    [self.view addSubview:_stringTwoImage];
+    
+    _stringThreeImage = [[UIImageView alloc] initWithFrame:CGRectMake(212, 460, fret_width, fret_height + 2)];
+    [_stringThreeImage setImage:[UIImage imageNamed:@"string.jpg"]];
+    [self.view addSubview:_stringThreeImage];
+
     //set up three hidden images
     _stringOneFretPressedImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 44, fret_width, fret_height)];
     [_stringOneFretPressedImage setImage:[UIImage imageNamed:@"fretPressed.jpg"]];
@@ -66,11 +81,13 @@
     _fretView.translatesAutoresizingMaskIntoConstraints  = NO;
     _strumView.delegate = self;
     _fretView.delegate  = self;
-
+    
+    
     //add navigation button
     UIButton *raagNavButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [raagNavButton setImage:[UIImage imageNamed:@"raagNavButton.jpg"] forState:UIControlStateNormal];
     [raagNavButton sizeToFit];
+    [raagNavButton addTarget:self action:@selector(raagButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithCustomView:raagNavButton];
     self.navigationItem.rightBarButtonItem = rightBarButton;
     
@@ -91,6 +108,22 @@
 
 -(BOOL)prefersStatusBarHidden{
     return YES;
+}
+
+-(void)raagButtonClicked{
+    
+}
+
+-(void)animateString{
+    NSLog(@"SWWWIPED");
+    CGRect ogRect = _stringOneImage.frame;
+    BOOL strumForward = NO;
+    [UIView animateWithDuration:0.5f animations:^{
+        [_stringOneImage setFrame:CGRectOffset(_stringOneImage.frame, strumForward ? 2.f : -2.f, 0)];
+    }];
+    [UIView animateWithDuration:.8f delay:.05f usingSpringWithDamping:.1f initialSpringVelocity:30.0f options:UIViewAnimationOptionTransitionNone animations:^{
+        [_stringOneImage setFrame:ogRect];
+    } completion:nil];
 }
 
 -(void)stringHit:(NSInteger)stringIndex{

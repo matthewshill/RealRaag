@@ -22,6 +22,7 @@
 		5C869D5F198A9E46001DD09C /* rubab2ndStringUpstroke.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 5C869D5C198A9E46001DD09C /* rubab2ndStringUpstroke.aupreset */; };
 		5C869D60198A9E46001DD09C /* rubab3rdStringUpstroke.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 5C869D5D198A9E46001DD09C /* rubab3rdStringUpstroke.aupreset */; };
 		5C966D2B199A7B0600129C65 /* raagNavButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C966D2A199A7B0600129C65 /* raagNavButton.jpg */; };
+		5C966D30199AAD0700129C65 /* string.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C966D2F199AAD0700129C65 /* string.jpg */; };
 		5C97673D199140850023FC23 /* fret.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C97673B199140850023FC23 /* fret.jpg */; };
 		5C97673E199140850023FC23 /* fretPressed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C97673C199140850023FC23 /* fretPressed.jpg */; };
 		5CACE3FC1993C1DA001B2461 /* rubabHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CACE3FB1993C1DA001B2461 /* rubabHistory.txt */; };
@@ -71,6 +72,7 @@
 		5C869D5C198A9E46001DD09C /* rubab2ndStringUpstroke.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rubab2ndStringUpstroke.aupreset; sourceTree = "<group>"; };
 		5C869D5D198A9E46001DD09C /* rubab3rdStringUpstroke.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rubab3rdStringUpstroke.aupreset; sourceTree = "<group>"; };
 		5C966D2A199A7B0600129C65 /* raagNavButton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = raagNavButton.jpg; sourceTree = "<group>"; };
+		5C966D2F199AAD0700129C65 /* string.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = string.jpg; sourceTree = "<group>"; };
 		5C97673B199140850023FC23 /* fret.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fret.jpg; path = Images.xcassets/fret.jpg; sourceTree = "<group>"; };
 		5C97673C199140850023FC23 /* fretPressed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fretPressed.jpg; path = Images.xcassets/fretPressed.jpg; sourceTree = "<group>"; };
 		5CACE3FB1993C1DA001B2461 /* rubabHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rubabHistory.txt; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		5CF31C31197F00380076A68D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5C966D2F199AAD0700129C65 /* string.jpg */,
 				5C966D2A199A7B0600129C65 /* raagNavButton.jpg */,
 				5CC51A681993EF4D004FAF71 /* dismiss.png */,
 				5CACE3FB1993C1DA001B2461 /* rubabHistory.txt */,
@@ -287,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C966D30199AAD0700129C65 /* string.jpg in Resources */,
 				5C7AC15E19871995003F5940 /* Sounds in Resources */,
 				5CF31C3D197F00380076A68D /* Main.storyboard in Resources */,
 				5C869D5F198A9E46001DD09C /* rubab2ndStringUpstroke.aupreset in Resources */,
@@ -462,7 +466,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "73EAE0EA-1B89-418A-823A-0EF5DC63D5D6";
+				PROVISIONING_PROFILE = "6338D6D8-E375-4009-8E66-59E25F8A7B84";
 			};
 			name = Debug;
 		};
@@ -483,7 +487,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "73EAE0EA-1B89-418A-823A-0EF5DC63D5D6";
+				PROVISIONING_PROFILE = "6338D6D8-E375-4009-8E66-59E25F8A7B84";
 			};
 			name = Release;
 		};

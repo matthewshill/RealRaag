@@ -27,6 +27,9 @@
 @property (nonatomic) UIImageView *stringOneFretPressedImage;
 @property (nonatomic) UIImageView *stringTwoFretPressedImage;
 @property (nonatomic) UIImageView *stringThreeFretPressedImage;
+@property (nonatomic) UIImageView *stringOneImage;
+@property (nonatomic) UIImageView *stringTwoImage;
+@property (nonatomic) UIImageView *stringThreeImage;
 
 @end
 
