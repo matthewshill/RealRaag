@@ -21,7 +21,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GB2-Ya-sWH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="923" y="339"/>
+            <point key="canvasLocation" x="1243" y="501"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="3IR-UW-PRs">
@@ -41,6 +41,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KhF-Io-hRH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="215" y="1326"/>
+        </scene>
+        <!--Raag View Controller-->
+        <scene sceneID="6TS-G9-9Lh">
+            <objects>
+                <viewController id="uiW-fF-cvv" customClass="RaagViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YnA-LX-pkH"/>
+                        <viewControllerLayoutGuide type="bottom" id="y6n-jb-kCb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NPB-96-z9Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eJN-1m-ACK"/>
+                    <connections>
+                        <segue destination="hBj-Xk-ZRH" kind="push" id="qbZ-qg-ISJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qel-jB-7f7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713" y="866"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -233,6 +255,7 @@
                     <connections>
                         <segue destination="hBj-Xk-ZRH" kind="push" identifier="gestureSegue" id="g4W-Ap-TJi"/>
                         <segue destination="Hlx-u7-DTz" kind="push" identifier="historySegue" id="1Xq-7y-5Fo"/>
+                        <segue destination="uiW-fF-cvv" kind="push" identifier="raagSegue" id="C5V-Vk-mb1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuN-WP-Wts" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -248,4 +271,7 @@
             <size key="landscapeSize" width="480" height="320"/>
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="qbZ-qg-ISJ"/>
+    </inferredMetricsTieBreakers>
 </document>

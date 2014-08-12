@@ -14,5 +14,6 @@
 
 @property (nonatomic) UIButton *playButton;
 @property (nonatomic) UIButton *historyButton;
+@property (nonatomic) UIButton *tutorialButton;
 
 @end

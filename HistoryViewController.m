@@ -17,12 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //self.navigationController.navigationBarHidden = YES;
+    _scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
+    _scrollView.contentSize = CGSizeMake(320, 900);
+    [self.view addSubview:_scrollView];
     
     CGRect rect = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height/2);
     _rubabImage = [[UIImageView alloc] initWithFrame:rect];
     [_rubabImage setImage:[UIImage imageNamed:@"rubab1.jpg"]];
     [_rubabImage setUserInteractionEnabled:YES];
-    [self.view addSubview:_rubabImage];
+    //[self.view addSubview:_rubabImage];
+    [_scrollView addSubview:_rubabImage];
     
     UIButton *b = [[UIButton alloc]
                    initWithFrame:CGRectMake(0, 0, _rubabImage.frame.size.width, _rubabImage.frame.size.height)];
@@ -36,18 +40,24 @@
     NSLog(@"file path: %@", filePath);
     NSString *fileContents = [NSString stringWithContentsOfFile:filePath encoding:NSASCIIStringEncoding error:&error];
     NSAttributedString *text = [[NSAttributedString alloc] initWithString:fileContents
-                                                               attributes:@{NSFontAttributeName:[UIFont fontWithName:@"HoeflerText-Italic" size:12]}];
+                                                               attributes:@{NSFontAttributeName:[UIFont fontWithName:@"HoeflerText-Italic" size:14]}];
     NSTextStorage *textStorage = [[NSTextStorage alloc] initWithAttributedString:text];
     NSLayoutManager *textLayout = [[NSLayoutManager alloc] init];
     //add layout manager to text storage object
     [textStorage addLayoutManager:textLayout];
-    NSTextContainer *textContainer = [[NSTextContainer alloc] initWithSize:self.view.bounds.size];
+    //CGSize textContainerSize = self.view.bounds.size;
+    //textContainerSize.height = textContainerSize.height + 64;
+    NSTextContainer *textContainer = [[NSTextContainer alloc] initWithSize:CGSizeMake(320, 640)];
     //add text view container to layout
     [textLayout addTextContainer:textContainer];
     //UITextView object using text container
-    _historyText = [[UITextView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height/2, self.view.bounds.size.width, 320) textContainer:textContainer];
+    _historyText = [[UITextView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height/2, self.view.bounds.size.width, 580) textContainer:textContainer];
+    [_historyText setScrollEnabled:NO];
     [_historyText setEditable:NO];
-    [self.view addSubview:_historyText];
+    //[self.view addSubview:_historyText];
+    [_scrollView addSubview:_historyText];
+    
+    
     
 }
 
@@ -56,13 +66,14 @@
     // Dispose of any resources that can be recreated.
 }
 
--(BOOL)prefersStatusBarHidden{
-    return YES;
-}
-
 -(IBAction)imageTapped:(id)sender{
     PhotoViewController *pvc = [PhotoViewController new];
+    [pvc setImageToDisplay:_rubabImage.image];
     [self presentViewController:pvc animated:YES completion:nil];
+}
+
+-(BOOL)prefersStatusBarHidden{
+    return YES;
 }
 
 /*

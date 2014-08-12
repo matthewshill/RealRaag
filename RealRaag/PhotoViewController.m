@@ -10,15 +10,42 @@
 
 @interface PhotoViewController ()
 
+@property (nonatomic) UIImageView *imageView;
+
 @end
 
 @implementation PhotoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:_imageView];
     
+    UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [cancelButton setTitle:@"X" forState:UIControlStateNormal];
+    [cancelButton setFrame:CGRectMake(self.view.bounds.size.width-40.f, 0.0f, 56.0f, 44.0f)];
+    [cancelButton setAutoresizingMask:(UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleBottomMargin)];
+    [cancelButton addTarget:self action:@selector(cancelPhotoView) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:cancelButton];
+    
+    [self.view setBackgroundColor:[UIColor blackColor]];
+    
+}
+
+-(void)setImageToDisplay:(UIImage *)imageToDisplay{
+    _imageToDisplay = imageToDisplay;
+    if(!_imageView){
+        CGRect rect = CGRectMake(0, 30, self.view.bounds.size.width, self.view.bounds.size.height-40);
+        _imageView = [[UIImageView alloc] initWithFrame:rect];
+        // Alternative to verbose autolayout
+        [_imageView setAutoresizingMask:(UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth)];
+        [_imageView setContentMode:UIViewContentModeScaleToFill];
+        [self.view addSubview:_imageView];
+    }
+    [_imageView setImage:_imageToDisplay];
+}
+
+-(void)cancelPhotoView{
+    NSLog(@"TOUCHED");
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -34,11 +34,14 @@ NSUInteger *touchCount;
     self.multipleTouchEnabled = YES;
     self.layer.borderColor = [UIColor purpleColor].CGColor;
     self.layer.borderWidth = 2;
+    _stringOneTouches = [[NSMutableArray alloc] init];
+    _stringTwoTouches = [[NSMutableArray alloc] init];
+    _stringThreeTouches = [[NSMutableArray alloc] init];
 }
 
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    touchCount = [touches count];
+    //touchCount = [touches count];
     NSUInteger tapCount = [[touches anyObject] tapCount];
     //NSLog(@"touch count: %lu", (unsigned long)touchCount);
     //NSLog(@"tap count: %lu", (unsigned long)tapCount);
@@ -55,6 +58,21 @@ NSUInteger *touchCount;
     NSInteger string = (startPoint.x / stringLength);
 
     Fret fretIndex = fret;
+    
+    //check which fret is touched
+    switch (string) {
+        case 0:
+            [_stringOneTouches addObject:touches];
+            break;
+        case 1:
+            [_stringTwoTouches addObject:touches];
+            break;
+        case 2:
+            [_stringThreeTouches addObject:touches];
+            break;
+        default:
+            break;
+    }
     
     if(self.delegate){
         [self.delegate fretsPressed:fretIndex stringIndex:string];
@@ -76,14 +94,60 @@ NSUInteger *touchCount;
     
     Fret fretIndex = fret;
     
-    if(self.delegate){
+    if ([_stringOneTouches containsObject:touches] && string != 0) {
+        
+        if (string == 1) {
+            [_stringTwoTouches addObject:touches];
+        }
+        if (string == 2){
+            [_stringThreeTouches addObject:touches];
+        }
+        [_stringOneTouches removeObject:touches];
+    }
+
+    if([_stringTwoTouches containsObject:touches] && string != 1) {
+        if (string == 0) {
+            [_stringOneTouches addObject:touches];
+        }
+        if (string == 2) {
+            [_stringThreeTouches addObject:touches];
+        }
+        [_stringTwoTouches removeObject:touches];
+    }
+    
+    if([_stringThreeTouches containsObject:touches] && string != 2){
+        if(string == 0){
+            [_stringOneTouches addObject:touches];
+        }
+        if(string == 1){
+            [_stringTwoTouches addObject:touches];
+        }
+        [_stringThreeTouches removeObject:touches];
+    }
+    
+    if(self.delegate && fretIndex < 5){
         [self.delegate fretsPressed:fretIndex stringIndex:string];
     }
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    int string = -1;
+    
+    if([_stringOneTouches containsObject:touches]){
+        [_stringOneTouches removeObject:touches];
+        string = 0;
+    }
+    if([_stringTwoTouches containsObject:touches]){
+        [_stringTwoTouches removeObject:touches];
+        string = 1;
+    }
+    if([_stringThreeTouches containsObject:touches]){
+        [_stringThreeTouches removeObject:touches];
+        string = 2;
+    }
+    
     if(self.delegate){
-        [self.delegate fretsPressed:FretOpen stringIndex:-1];
+        [self.delegate fretsPressed:FretOpen stringIndex:string];
     }
 }
 

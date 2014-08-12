@@ -13,5 +13,6 @@
 
 @property (strong, nonatomic) UIImageView *rubabImage;
 @property (nonatomic) UITextView *historyText;
+@property (nonatomic, strong) UIScrollView *scrollView;
 
 @end
