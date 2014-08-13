@@ -57,7 +57,7 @@
     //[self.view addSubview:_historyText];
     [_scrollView addSubview:_historyText];
     
-    
+    self.navigationItem.title = @"RealRaag";
     
 }
 

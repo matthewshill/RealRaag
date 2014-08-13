@@ -38,7 +38,7 @@
     [self.view addSubview:_playButton];
     
     _tutorialButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [_tutorialButton setTitle:@"Tutorial" forState:UIControlStateNormal];
+    [_tutorialButton setTitle:@"TableView" forState:UIControlStateNormal];
     _tutorialButton.frame = CGRectMake(80.0, 285.0, 160.0, 40.0);
     [[_tutorialButton layer] setBorderWidth:2.0];
     [[_tutorialButton layer] setBorderColor:[UIColor blueColor].CGColor];
@@ -64,7 +64,7 @@
 }
 
 -(IBAction)tutorialButtonClicked:(id)sender{
-    [self performSegueWithIdentifier:@"raagSegue" sender:sender];
+    [self performSegueWithIdentifier:@"tableView" sender:sender];
 }
 
 /*

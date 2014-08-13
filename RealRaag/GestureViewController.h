@@ -10,11 +10,13 @@
 #import "AudioController.h"
 #import "StrumView.h"
 #import "FretView.h"
+#import "RightPanelTableViewController.h"
 
 @interface GestureViewController : UIViewController
 
 @property (nonatomic) IBOutlet StrumView *strumView;
 @property (nonatomic) IBOutlet FretView *fretView;
+
 @property (nonatomic) NSInteger stringOnefret;
 @property (nonatomic) NSInteger stringTwofret;
 @property (nonatomic) NSInteger stringThreefret;

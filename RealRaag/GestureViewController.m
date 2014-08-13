@@ -8,8 +8,14 @@
 
 #import "GestureViewController.h"
 
-@interface GestureViewController () <StrumDelegate, FretDelegate>
+#define kImageFretHighlight [UIImage imageNamed:@"fretHighlight"]
+#define kStringImage [UIImage imageNamed:@"tempString"]
+#define kFretImage [UIImage imageNamed:@"fret"]
+#define kStringWidth 3.f
 
+@interface GestureViewController () <StrumDelegate, FretDelegate>
+@property RightPanelTableViewController *rightPanelTable;
+@property UIActionSheet *popUp;
 @end
 
 @implementation GestureViewController
@@ -17,54 +23,55 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.title = @"Free Play";
+    
     NSInteger fret_height = (self.view.bounds.size.height - (STRUM_HEIGHT) - 44) / 4;
     NSInteger fret_width = self.view.bounds.size.width / 3;
+    
     
     _imageArray = [[NSMutableArray alloc] init];
     _stringOneFretDown = [[NSMutableArray alloc] init];
     _stringTwoFretDown = [[NSMutableArray alloc] init];
     _stringThreeFretDown = [[NSMutableArray alloc] init];
     
+    //setup fretboard images
     for (int string = 0; string < 3; string++) {
         for(int fret = 0; fret < 4; fret++){
             CGRect rect = CGRectMake(string * fret_width, fret_height * fret + 44, fret_width, fret_height);
             _imageView = [[UIImageView alloc] initWithFrame:rect];
-            [_imageView setImage:[UIImage imageNamed:@"string.jpg"]];
+            [_imageView setImage:kFretImage];
             [self.view addSubview:_imageView];
             _imageView.userInteractionEnabled = YES;
             [_imageArray addObject:_imageView];
         }
     }
-    //setup strum images and animation
-    _stringOneImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 460, fret_width, fret_height + 2)];
-    [_stringOneImage setImage:[UIImage imageNamed:@"string.jpg"]];
     
-    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(animateString)];
-    [_stringOneImage addGestureRecognizer:swipe];
+    //setup string images
+    _stringOneImage = [[UIImageView alloc] initWithFrame:[self frameForRestingStringAtIndex:0]];
+    [_stringOneImage setImage:kStringImage];
     [self.view addSubview:_stringOneImage];
     
-    _stringTwoImage = [[UIImageView alloc] initWithFrame:CGRectMake(106, 460, fret_width, fret_height + 2)];
-    [_stringTwoImage setImage:[UIImage imageNamed:@"string.jpg"]];
+    _stringTwoImage = [[UIImageView alloc] initWithFrame:[self frameForRestingStringAtIndex:1]];
+    [_stringTwoImage setImage:kStringImage];
     [self.view addSubview:_stringTwoImage];
     
-    _stringThreeImage = [[UIImageView alloc] initWithFrame:CGRectMake(212, 460, fret_width, fret_height + 2)];
-    [_stringThreeImage setImage:[UIImage imageNamed:@"string.jpg"]];
+    _stringThreeImage = [[UIImageView alloc] initWithFrame:[self frameForRestingStringAtIndex:2]];
+    [_stringThreeImage setImage:kStringImage];
     [self.view addSubview:_stringThreeImage];
 
     //set up three hidden images
     _stringOneFretPressedImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 44, fret_width, fret_height)];
-    [_stringOneFretPressedImage setImage:[UIImage imageNamed:@"fretPressed.jpg"]];
+    [_stringOneFretPressedImage setImage:kImageFretHighlight];
     _stringOneFretPressedImage.hidden = YES;
     [self.view addSubview:_stringOneFretPressedImage];
     _stringTwoFretPressedImage = [[UIImageView alloc] initWithFrame:CGRectMake(fret_width, 44, fret_width, fret_height)];
-    [_stringTwoFretPressedImage setImage:[UIImage imageNamed:@"fretPressed.jpg"]];
+    [_stringTwoFretPressedImage setImage:kImageFretHighlight];
     _stringTwoFretPressedImage.hidden = YES;
     [self.view addSubview:_stringTwoFretPressedImage];
     _stringThreeFretPressedImage = [[UIImageView alloc] initWithFrame:CGRectMake(2 * fret_width, 44, fret_width, fret_height)];
-    [_stringThreeFretPressedImage setImage:[UIImage imageNamed:@"fretPressed.jpg"]];
+    [_stringThreeFretPressedImage setImage:kImageFretHighlight];
     _stringThreeFretPressedImage.hidden = YES;
     [self.view addSubview:_stringThreeFretPressedImage];
-    
     
     //set up custom UIViews
     self.fretView = [FretView new];
@@ -82,6 +89,14 @@
     _strumView.delegate = self;
     _fretView.delegate  = self;
     
+    //add right panel navigation
+    /*_rightPanelTable = [RightPanelTableViewController new];
+    [self addChildViewController:_rightPanelTable];
+    [self.view addSubview:_rightPanelTable.tableView];
+    [_rightPanelTable.tableView setFrame:CGRectMake(self.view.bounds.size.width, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    [UIView animateWithDuration:1 animations:^{
+        [_rightPanelTable.tableView setFrame:self.view.bounds];
+    }];*/
     
     //add navigation button
     UIButton *raagNavButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -91,6 +106,8 @@
     UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithCustomView:raagNavButton];
     self.navigationItem.rightBarButtonItem = rightBarButton;
     
+    _popUp = [[UIActionSheet alloc] initWithTitle:@"ActionSheet" delegate:_popUp.delegate cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Raags",@"Tutorial", nil];
+    _popUp.tag = 1;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -111,18 +128,45 @@
 }
 
 -(void)raagButtonClicked{
-    
+    NSLog(@"CLICKED");
+    /*[UIView animateWithDuration:0.05f animations:^{
+        CGFloat x = self.view.bounds.size.width - _rightPanelTable.tableView.bounds.size.width;
+        [_rightPanelTable.tableView setFrame:CGRectMake(x, 0, _rightPanelTable.tableView.bounds.size.width, _rightPanelTable.tableView.bounds.size.height)];
+    }];*/
+    [_popUp showInView:self.view];
 }
 
--(void)animateString{
-    NSLog(@"SWWWIPED");
-    CGRect ogRect = _stringOneImage.frame;
-    BOOL strumForward = NO;
-    [UIView animateWithDuration:0.5f animations:^{
-        [_stringOneImage setFrame:CGRectOffset(_stringOneImage.frame, strumForward ? 2.f : -2.f, 0)];
+-(CGFloat)xForStringAtIndex:(NSInteger)stringIndex{
+    return self.view.bounds.size.width/6.f + 2.f*stringIndex*self.view.bounds.size.width/6.f - STRING_WIDTH/2.f;
+}
+
+-(CGRect)frameForRestingStringAtIndex:(NSInteger)stringIndex{
+    return CGRectMake([self xForStringAtIndex:stringIndex], 0.f, STRING_WIDTH, self.view.bounds.size.height);
+}
+
+-(void)animateString:(NSInteger)stringIndex downStroke:(BOOL)downStroke{
+    UIView *viewToAnimate;
+    CGRect finalView = [self frameForRestingStringAtIndex:stringIndex];
+    switch (stringIndex) {
+        case 0:
+            viewToAnimate = _stringOneImage;
+            break;
+        case 1:
+            viewToAnimate = _stringTwoImage;
+            break;
+        case 2:
+            viewToAnimate = _stringThreeImage;
+            break;
+        default:
+            break;
+    }
+    
+    //animation
+    [UIView animateWithDuration:0.05f animations:^{
+        [viewToAnimate setFrame:CGRectOffset(finalView, downStroke ? 5.f : -5.f, 0)];
     }];
-    [UIView animateWithDuration:.8f delay:.05f usingSpringWithDamping:.1f initialSpringVelocity:30.0f options:UIViewAnimationOptionTransitionNone animations:^{
-        [_stringOneImage setFrame:ogRect];
+    [UIView animateWithDuration:1.f delay:0.05f usingSpringWithDamping:.08f initialSpringVelocity:30.0f options:UIViewAnimationOptionTransitionNone animations:^{
+        [viewToAnimate setFrame:finalView];
     } completion:nil];
 }
 
@@ -206,6 +250,9 @@
             break;
     }
     
+    if(stringIndex > -1){
+        [self animateString:stringIndex%3 downStroke: stringIndex<3];
+    }
     //NSLog(@"(fret, string) %ld %ld", (long)self.fret, (long)self.string);
     //NSLog(@"string index: %ld", (long)stringIndex);
 }
