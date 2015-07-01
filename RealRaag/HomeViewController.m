@@ -21,29 +21,32 @@
     //self.navigationController.navigationBarHidden = YES;
     //buttons for navigation control
 
-    _historyButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [_historyButton setTitle:@"History" forState:UIControlStateNormal];
-    _historyButton.frame = CGRectMake(80.0, 185.0, 160.0, 40.0);
-    [[_historyButton layer] setBorderWidth:2.0];
-    [[_historyButton layer] setBorderColor:[UIColor blueColor].CGColor];
+    self.view.backgroundColor = [UIColor colorWithRed:(246.0/255.0) green:(146.0/255.0) blue:(30.0/255.0) alpha:1.0];
+    
+    UIImage *border = [UIImage imageNamed:@"Images/border"];
+    UIImageView *borderView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    borderView.image = border;
+    [self.view addSubview:borderView];
+    
+    _historyButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _historyButton.frame = CGRectMake(125.0, 205.0, 80.0, 80.0);
+    [_historyButton setBackgroundImage:[UIImage imageNamed:@"Images/HistoryIcon"] forState:UIControlStateNormal];
     [_historyButton addTarget:self action:@selector(historyButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_historyButton];
     
-    _playButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [_playButton setTitle:@"Play" forState:UIControlStateNormal];
-    _playButton.frame = CGRectMake(80.0, 235.0, 160.0, 40.0);
-    [[_playButton layer] setBorderWidth:2.0];
-    [[_playButton layer] setBorderColor:[UIColor blueColor].CGColor];
+    _playButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _playButton.frame = CGRectMake(125.0, 220.0, 80.0, 80.0);
+    [_playButton setBackgroundImage:[UIImage imageNamed:@"Images/playButton"] forState:UIControlStateNormal];
     [_playButton addTarget:self action:@selector(playButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_playButton];
     
-    _tutorialButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    /*_tutorialButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [_tutorialButton setTitle:@"TableView" forState:UIControlStateNormal];
     _tutorialButton.frame = CGRectMake(80.0, 285.0, 160.0, 40.0);
     [[_tutorialButton layer] setBorderWidth:2.0];
     [[_tutorialButton layer] setBorderColor:[UIColor blueColor].CGColor];
     [_tutorialButton addTarget:self action:@selector(tutorialButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_tutorialButton];
+    [self.view addSubview:_tutorialButton];*/
 }
 
 - (void)didReceiveMemoryWarning {

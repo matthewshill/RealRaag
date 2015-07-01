@@ -32,6 +32,7 @@
 @property (nonatomic) UIImageView *stringOneImage;
 @property (nonatomic) UIImageView *stringTwoImage;
 @property (nonatomic) UIImageView *stringThreeImage;
+@property (nonatomic) UIImageView *soundholeImage;
 
 @end
 

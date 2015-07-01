@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Rlq-wQ-2ZM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Rlq-wQ-2ZM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Gesture View Controller-->
@@ -21,7 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GB2-Ya-sWH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="667" y="544"/>
+            <point key="canvasLocation" x="789" y="-72"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="3IR-UW-PRs">
@@ -42,193 +43,28 @@
             </objects>
             <point key="canvasLocation" x="261" y="1180"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="qI6-WV-dWs">
+        <!--Home View Controller-->
+        <scene sceneID="0z2-5x-Dvb">
             <objects>
-                <viewController id="IZs-Dh-rTP" customClass="TableViewController" sceneMemberID="viewController">
+                <viewController id="CyL-m1-EOv" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="p54-Uy-uhw"/>
-                        <viewControllerLayoutGuide type="bottom" id="8oi-o6-zMA"/>
+                        <viewControllerLayoutGuide type="top" id="UyK-GV-N4w"/>
+                        <viewControllerLayoutGuide type="bottom" id="YLs-ht-opP"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="YJA-Iz-NqX">
+                    <view key="view" contentMode="scaleToFill" id="yjT-ez-bcx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="s7H-RU-EpY">
-                                <rect key="frame" x="0.0" y="66" width="320" height="480"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0pw-I1-O2h"/>
+                    <navigationItem key="navigationItem" id="jqE-0V-VRd"/>
                     <connections>
-                        <segue destination="Hlx-u7-DTz" kind="push" identifier="historyView" id="aHq-HI-SXQ"/>
-                        <segue destination="hBj-Xk-ZRH" kind="push" identifier="playSegue" id="frO-rf-FyJ"/>
+                        <segue destination="hBj-Xk-ZRH" kind="push" identifier="gestureSegue" id="R5P-po-BRI"/>
+                        <segue destination="Hlx-u7-DTz" kind="push" identifier="historySegue" id="Idm-Uj-QTc"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2wt-B4-kxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oSq-gb-Nj0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="261" y="544"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
-            <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" tag="1048" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7t-8j-cD3">
-                                <rect key="frame" x="263" y="70" width="30" height="30"/>
-                                <state key="normal" title="B">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="playNoteOn:" destination="vXZ-lx-hvc" eventType="touchDown" id="8BA-tF-2LG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1050" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxo-Yh-1Ar">
-                                <rect key="frame" x="263" y="119" width="30" height="30"/>
-                                <state key="normal" title="C">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="playNoteOn:" destination="vXZ-lx-hvc" eventType="touchDown" id="7W8-Hz-J4Y"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1052" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28h-cw-3HQ">
-                                <rect key="frame" x="256" y="163" width="30" height="30"/>
-                                <state key="normal" title="C#">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="playNoteOn:" destination="vXZ-lx-hvc" eventType="touchDown" id="pSp-ur-IUt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1053" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mM-0T-pvz">
-                                <rect key="frame" x="256" y="212" width="30" height="30"/>
-                                <state key="normal" title="D">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="playNoteOn:" destination="vXZ-lx-hvc" eventType="touchDown" id="QSy-1l-cdy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1055" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8a-Yl-t2X">
-                                <rect key="frame" x="256" y="256" width="30" height="30"/>
-                                <state key="normal" title="D#">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="playNoteOn:" destination="vXZ-lx-hvc" eventType="touchDown" id="YoU-eL-Gly"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2048" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csd-Dj-5av">
-                                <rect key="frame" x="140" y="75" width="30" height="30"/>
-                                <state key="normal" title="F#">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="playNoteOn:" destination="vXZ-lx-hvc" eventType="touchDown" id="DDl-rJ-iMd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2050" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58M-Lz-5S2">
-                                <rect key="frame" x="140" y="119" width="30" height="30"/>
-                                <state key="normal" title="G">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="playNoteOn:" destination="vXZ-lx-hvc" eventType="touchDown" id="ocf-TQ-DXj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2052" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5su-7U-4Om">
-                                <rect key="frame" x="140" y="163" width="30" height="30"/>
-                                <state key="normal" title="G#">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="playNoteOn:" destination="vXZ-lx-hvc" eventType="touchDown" id="Ixl-tK-KiA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2053" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZg-uF-Jif">
-                                <rect key="frame" x="140" y="212" width="30" height="30"/>
-                                <state key="normal" title="A">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="playNoteOn:" destination="vXZ-lx-hvc" eventType="touchDown" id="eXA-zk-sGb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2055" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZS-c7-osC">
-                                <rect key="frame" x="140" y="256" width="30" height="30"/>
-                                <state key="normal" title="A#">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="playNoteOn:" destination="vXZ-lx-hvc" eventType="touchDown" id="41s-XR-YkR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3048" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NyV-XY-oeU">
-                                <rect key="frame" x="47" y="75" width="25" height="25"/>
-                                <state key="normal" title="C#">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="playNoteOn:" destination="vXZ-lx-hvc" eventType="touchDown" id="vCJ-8v-ygy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3050" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUR-Lo-1CF">
-                                <rect key="frame" x="37" y="119" width="35" height="29"/>
-                                <state key="normal" title="D">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="playNoteOn:" destination="vXZ-lx-hvc" eventType="touchDown" id="sWn-qL-uqy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3052" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJs-bc-qxq">
-                                <rect key="frame" x="42" y="163" width="30" height="30"/>
-                                <state key="normal" title="D#">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="playNoteOn:" destination="vXZ-lx-hvc" eventType="touchDown" id="8GB-fa-6eX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3053" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrR-sq-04U">
-                                <rect key="frame" x="42" y="212" width="30" height="30"/>
-                                <state key="normal" title="E">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="playNoteOn:" destination="vXZ-lx-hvc" eventType="touchDown" id="JnN-p3-viz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3055" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIW-DP-aLh">
-                                <rect key="frame" x="42" y="256" width="30" height="30"/>
-                                <state key="normal" title="F">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="playNoteOn:" destination="vXZ-lx-hvc" eventType="touchDown" id="EUM-tm-zlp"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <gestureRecognizers/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Bvo-GJ-PJ4">
-                        <barButtonItem key="rightBarButtonItem" title="TouchHandling" id="5LX-MW-Uhp"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="226" y="-26"/>
+            <point key="canvasLocation" x="198" y="-202"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9mq-Pw-KKM">
@@ -238,20 +74,17 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="IZs-Dh-rTP" kind="relationship" relationship="rootViewController" id="C1i-9Y-9UX"/>
+                        <segue destination="CyL-m1-EOv" kind="relationship" relationship="rootViewController" id="78i-0z-fcm"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAK-PJ-iep" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-190" y="544"/>
+            <point key="canvasLocation" x="-376" y="-188"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination">
-            <size key="portraitSize" width="320" height="480"/>
-            <size key="landscapeSize" width="480" height="320"/>
-        </simulatedScreenMetrics>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

@@ -37,8 +37,8 @@
     return self;
 }
 -(void)setup{
-    self.layer.borderWidth = 2;
-    self.layer.borderColor = [UIColor blackColor].CGColor;
+    //self.layer.borderWidth = 2;
+    //self.layer.borderColor = [UIColor blackColor].CGColor;
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{

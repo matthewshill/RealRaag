@@ -94,8 +94,10 @@
     MixerUnitDescription.componentSubType = kAudioUnitSubType_MultiChannelMixer;
     MixerUnitDescription.componentManufacturer = kAudioUnitManufacturer_Apple;
     
+    
     MixerUnitDescription.componentFlags = 0;
     MixerUnitDescription.componentFlagsMask = 0;
+    
     result = AUGraphAddNode(self.processingGraph, &MixerUnitDescription, &_mixerNode);
     
     if (noErr !=  result) {
@@ -132,6 +134,7 @@
     result = AUGraphNodeInfo(self.processingGraph, samplerNode4, 0, &_samplerUnit4);
     result = AUGraphNodeInfo(self.processingGraph, samplerNode5, 0, &_samplerUnit5);
     result = AUGraphNodeInfo(self.processingGraph, samplerNode6, 0, &_samplerUnit6);
+    
     
     NSCAssert(result == noErr, @"Unable to obtain a reference to the Sampler Unit. Error code %d '%.4s'", (int) result, (const char *)&result);
     //save I/O
@@ -283,7 +286,7 @@
     CFRelease(propertyResourceData);
     
     return result;
-}
+}   
 
 - (BOOL) setupAudioSession {
     AVAudioSession *mySession = [AVAudioSession sharedInstance];

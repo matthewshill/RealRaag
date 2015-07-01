@@ -86,7 +86,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/main.m"
@@ -328,6 +328,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[GestureViewController strumView]"
                   moduleName = "RealRaag"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/swillow/Documents/iOS-dev/RealRaag/RealRaag/GestureViewController.h"
                   timestampString = "428535384.631431"
                   startingColumnNumber = "9223372036854775807"
@@ -342,6 +343,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[GestureViewController setStrumView:]"
                   moduleName = "RealRaag"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/swillow/Documents/iOS-dev/RealRaag/RealRaag/GestureViewController.h"
                   timestampString = "428535384.631655"
                   startingColumnNumber = "9223372036854775807"
@@ -360,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
             landmarkName = "-stringHit:"
             landmarkType = "5">
          </BreakpointContent>
@@ -376,11 +378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "382"
-            endingLineNumber = "382">
+            startingLineNumber = "394"
+            endingLineNumber = "394">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -390,11 +392,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "387"
-            endingLineNumber = "387">
+            startingLineNumber = "399"
+            endingLineNumber = "399">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -404,11 +406,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/FretView.m"
-            timestampString = "429480032.492034"
+            timestampString = "455416157.099371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "-touchesMoved:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -420,11 +422,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/FretView.m"
-            timestampString = "429480032.492034"
+            timestampString = "455416157.099371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "-touchesBegan:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -436,11 +438,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "246"
-            endingLineNumber = "246"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
             landmarkName = "-stringHit:"
             landmarkType = "5">
          </BreakpointContent>
@@ -452,11 +454,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "235"
-            endingLineNumber = "235"
+            startingLineNumber = "247"
+            endingLineNumber = "247"
             landmarkName = "-stringHit:"
             landmarkType = "5">
          </BreakpointContent>
@@ -468,11 +470,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "366"
-            endingLineNumber = "366">
+            startingLineNumber = "378"
+            endingLineNumber = "378">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -498,11 +500,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/FretView.m"
-            timestampString = "429480032.492034"
+            timestampString = "455416157.099371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "-touchesEnded:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -514,11 +516,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/HomeViewController.m"
-            timestampString = "429137935.614168"
+            timestampString = "457340233.187991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -530,11 +532,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/HomeViewController.m"
-            timestampString = "429198976.095332"
+            timestampString = "457342640.217056"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "-playButtonClicked:"
             landmarkType = "5">
          </BreakpointContent>
@@ -578,11 +580,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/FretView.m"
-            timestampString = "429480032.492034"
+            timestampString = "455416157.099371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "-touchesBegan:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -594,11 +596,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/FretView.m"
-            timestampString = "429475610.376832"
+            timestampString = "455416157.099371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "-touchesBegan:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -610,11 +612,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/FretView.m"
-            timestampString = "429475629.883395"
+            timestampString = "455416157.099371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "-touchesBegan:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -626,11 +628,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/FretView.m"
-            timestampString = "429480032.492034"
+            timestampString = "455416157.099371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "-touchesEnded:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -642,11 +644,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/FretView.m"
-            timestampString = "429480032.492034"
+            timestampString = "455416157.099371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "-touchesEnded:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -658,11 +660,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/FretView.m"
-            timestampString = "429480032.492034"
+            timestampString = "455416157.099371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "-touchesEnded:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -674,11 +676,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/FretView.m"
-            timestampString = "429480032.492034"
+            timestampString = "455416157.099371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "-touchesMoved:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -690,11 +692,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/FretView.m"
-            timestampString = "429480032.492034"
+            timestampString = "455416157.099371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "-touchesMoved:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -706,11 +708,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/FretView.m"
-            timestampString = "429480032.492034"
+            timestampString = "455416157.099371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "-touchesMoved:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -722,11 +724,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/FretView.m"
-            timestampString = "429480032.492034"
+            timestampString = "455416157.099371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "-touchesMoved:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -738,11 +740,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/FretView.m"
-            timestampString = "429480032.492034"
+            timestampString = "455416157.099371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "-touchesMoved:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -754,11 +756,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/FretView.m"
-            timestampString = "429480032.492034"
+            timestampString = "455416157.099371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "-touchesMoved:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -770,11 +772,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/FretView.m"
-            timestampString = "429480013.148883"
+            timestampString = "455416157.099371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "-touchesBegan:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -786,11 +788,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/FretView.m"
-            timestampString = "429480022.936337"
+            timestampString = "455416157.099371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "-touchesBegan:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -802,11 +804,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/FretView.m"
-            timestampString = "429480861.599054"
+            timestampString = "455416157.099371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "-touchesMoved:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -818,11 +820,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "301"
-            endingLineNumber = "301"
+            startingLineNumber = "313"
+            endingLineNumber = "313"
             landmarkName = "-fretsPressed:stringIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -834,11 +836,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "291"
-            endingLineNumber = "291"
+            startingLineNumber = "303"
+            endingLineNumber = "303"
             landmarkName = "-fretsPressed:stringIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -850,11 +852,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "339"
-            endingLineNumber = "339"
+            startingLineNumber = "351"
+            endingLineNumber = "351"
             landmarkName = "-fretsPressed:stringIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -866,11 +868,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "320"
-            endingLineNumber = "320"
+            startingLineNumber = "332"
+            endingLineNumber = "332"
             landmarkName = "-fretsPressed:stringIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -882,11 +884,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "307"
-            endingLineNumber = "307"
+            startingLineNumber = "319"
+            endingLineNumber = "319"
             landmarkName = "-fretsPressed:stringIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -898,11 +900,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "315"
-            endingLineNumber = "315"
+            startingLineNumber = "327"
+            endingLineNumber = "327"
             landmarkName = "-fretsPressed:stringIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -914,11 +916,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
             landmarkName = "-stringHit:"
             landmarkType = "5">
          </BreakpointContent>
@@ -930,11 +932,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "297"
-            endingLineNumber = "297"
+            startingLineNumber = "309"
+            endingLineNumber = "309"
             landmarkName = "-fretsPressed:stringIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -946,7 +948,39 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "323"
+            endingLineNumber = "323"
+            landmarkName = "-fretsPressed:stringIndex:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RealRaag/GestureViewController.m"
+            timestampString = "429716276.93749"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "329"
+            endingLineNumber = "329"
+            landmarkName = "-fretsPressed:stringIndex:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RealRaag/GestureViewController.m"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "311"
@@ -962,11 +996,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "317"
-            endingLineNumber = "317"
+            startingLineNumber = "280"
+            endingLineNumber = "280"
             landmarkName = "-fretsPressed:stringIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -978,11 +1012,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "299"
-            endingLineNumber = "299"
+            startingLineNumber = "305"
+            endingLineNumber = "305"
             landmarkName = "-fretsPressed:stringIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -994,11 +1028,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "268"
-            endingLineNumber = "268"
+            startingLineNumber = "324"
+            endingLineNumber = "324"
             landmarkName = "-fretsPressed:stringIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1010,11 +1044,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "293"
-            endingLineNumber = "293"
+            startingLineNumber = "343"
+            endingLineNumber = "343"
             landmarkName = "-fretsPressed:stringIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1026,43 +1060,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "312"
-            endingLineNumber = "312"
-            landmarkName = "-fretsPressed:stringIndex:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "331"
-            endingLineNumber = "331"
-            landmarkName = "-fretsPressed:stringIndex:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "-stringHit:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1074,11 +1076,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
+            startingLineNumber = "232"
+            endingLineNumber = "232"
             landmarkName = "-stringHit:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1090,11 +1092,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "217"
-            endingLineNumber = "217"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
             landmarkName = "-stringHit:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1106,11 +1108,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -1122,11 +1124,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "-raagButtonClicked"
             landmarkType = "5">
          </BreakpointContent>
@@ -1138,27 +1140,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
+            timestampString = "429716276.93749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RealRaag/GestureViewController.m"
-            timestampString = "429658849.774047"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -1175,6 +1161,54 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
             endingLineNumber = "20"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RealRaag/TableViewController.m"
+            timestampString = "455418651.588922"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "-setupTableView"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RealRaag/HomeViewController.m"
+            timestampString = "457342640.217056"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RealRaag/HomeViewController.m"
+            timestampString = "457341573.565782"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>

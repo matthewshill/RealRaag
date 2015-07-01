@@ -32,8 +32,6 @@ NSUInteger *touchCount;
 -(void)setup{
     self.userInteractionEnabled = YES;
     self.multipleTouchEnabled = YES;
-    self.layer.borderColor = [UIColor purpleColor].CGColor;
-    self.layer.borderWidth = 2;
     _stringOneTouches = [[NSMutableArray alloc] init];
     _stringTwoTouches = [[NSMutableArray alloc] init];
     _stringThreeTouches = [[NSMutableArray alloc] init];
@@ -41,15 +39,8 @@ NSUInteger *touchCount;
 
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    //touchCount = [touches count];
     NSUInteger tapCount = [[touches anyObject] tapCount];
-    //NSLog(@"touch count: %lu", (unsigned long)touchCount);
-    //NSLog(@"tap count: %lu", (unsigned long)tapCount);
     CGPoint startPoint = [[touches anyObject] locationInView:self];
-    //NSLog(@"(x,y) = %f %f", startPoint.x, startPoint.y);
-    //CGFloat height = self.bounds.size.height;
-    
-    //Fret fretIndex = FretOpen;
     
     NSInteger fretLength = (self.bounds.size.height / 4);
     NSInteger fret = (startPoint.y / fretLength) + 1;

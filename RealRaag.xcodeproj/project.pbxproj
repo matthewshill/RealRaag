@@ -35,13 +35,15 @@
 		5CACE3FC1993C1DA001B2461 /* rubabHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CACE3FB1993C1DA001B2461 /* rubabHistory.txt */; };
 		5CC51A691993EF4D004FAF71 /* dismiss.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC51A681993EF4D004FAF71 /* dismiss.png */; };
 		5CC51A701993FF80004FAF71 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC51A6F1993FF80004FAF71 /* PhotoViewController.m */; };
+		5CE14DFF199CEDDC005A738C /* soundhole.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CE14DFE199CEDDB005A738C /* soundhole.png */; };
+		5CE14E01199D1A13005A738C /* strum@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CE14E00199D1A13005A738C /* strum@2x.png */; };
 		5CF31C34197F00380076A68D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF31C33197F00380076A68D /* main.m */; };
 		5CF31C37197F00380076A68D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF31C36197F00380076A68D /* AppDelegate.m */; };
-		5CF31C3A197F00380076A68D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF31C39197F00380076A68D /* ViewController.m */; };
 		5CF31C3D197F00380076A68D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CF31C3B197F00380076A68D /* Main.storyboard */; };
 		5CF31C3F197F00380076A68D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF31C3E197F00380076A68D /* Images.xcassets */; };
 		5CF31C4B197F00380076A68D /* RealRaagTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF31C4A197F00380076A68D /* RealRaagTests.m */; };
 		5CF31C56197F03CE0076A68D /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF31C55197F03CE0076A68D /* AudioController.m */; };
+		5CF85D2B1B427ADD005F10B8 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 5CF85D2A1B427ADD005F10B8 /* Images */; };
 		5CFA83821986A745007C2F20 /* MIDIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFA83811986A745007C2F20 /* MIDIHelper.m */; };
 /* End PBXBuildFile section */
 
@@ -94,13 +96,13 @@
 		5CC51A681993EF4D004FAF71 /* dismiss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dismiss.png; sourceTree = "<group>"; };
 		5CC51A6A1993F424004FAF71 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
 		5CC51A6F1993FF80004FAF71 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		5CE14DFE199CEDDB005A738C /* soundhole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soundhole.png; sourceTree = "<group>"; };
+		5CE14E00199D1A13005A738C /* strum@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "strum@2x.png"; sourceTree = "<group>"; };
 		5CF31C2E197F00380076A68D /* RealRaag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealRaag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF31C32197F00380076A68D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CF31C33197F00380076A68D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5CF31C35197F00380076A68D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5CF31C36197F00380076A68D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5CF31C38197F00380076A68D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5CF31C39197F00380076A68D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5CF31C3C197F00380076A68D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5CF31C3E197F00380076A68D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5CF31C44197F00380076A68D /* RealRaagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealRaagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +110,7 @@
 		5CF31C4A197F00380076A68D /* RealRaagTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealRaagTests.m; sourceTree = "<group>"; };
 		5CF31C54197F03CE0076A68D /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
 		5CF31C55197F03CE0076A68D /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
+		5CF85D2A1B427ADD005F10B8 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		5CFA83801986A745007C2F20 /* MIDIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDIHelper.h; sourceTree = "<group>"; };
 		5CFA83811986A745007C2F20 /* MIDIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIDIHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +154,7 @@
 		5CF31C30197F00380076A68D /* RealRaag */ = {
 			isa = PBXGroup;
 			children = (
+				5CF85D2A1B427ADD005F10B8 /* Images */,
 				5C7AC15D19871995003F5940 /* Sounds */,
 				5CF31C54197F03CE0076A68D /* AudioController.h */,
 				5CF31C55197F03CE0076A68D /* AudioController.m */,
@@ -172,8 +176,6 @@
 				5CC51A6F1993FF80004FAF71 /* PhotoViewController.m */,
 				5C15A1FC198851AE0098ADF4 /* StrumView.h */,
 				5C15A1FD198851AE0098ADF4 /* StrumView.m */,
-				5CF31C38197F00380076A68D /* ViewController.h */,
-				5CF31C39197F00380076A68D /* ViewController.m */,
 				5CF31C3B197F00380076A68D /* Main.storyboard */,
 				5CF31C3E197F00380076A68D /* Images.xcassets */,
 				5CF31C31197F00380076A68D /* Supporting Files */,
@@ -188,6 +190,8 @@
 		5CF31C31197F00380076A68D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5CE14DFE199CEDDB005A738C /* soundhole.png */,
+				5CE14E00199D1A13005A738C /* strum@2x.png */,
 				5C4B2CE1199BE69300F38D7D /* rubabPlayer.png */,
 				5C4B2CDF199BE60B00F38D7D /* ustad_rahim_kushnawaz.jpg */,
 				5C4B2CDA199BB8F900F38D7D /* tempString@2x.png */,
@@ -279,6 +283,7 @@
 				TargetAttributes = {
 					5CF31C2D197F00380076A68D = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 4569CKBAB5;
 					};
 					5CF31C43197F00380076A68D = {
 						CreatedOnToolsVersion = 6.0;
@@ -314,13 +319,16 @@
 				5C966D30199AAD0700129C65 /* string.jpg in Resources */,
 				5C7AC15E19871995003F5940 /* Sounds in Resources */,
 				5CF31C3D197F00380076A68D /* Main.storyboard in Resources */,
+				5CF85D2B1B427ADD005F10B8 /* Images in Resources */,
 				5C4B2CE0199BE60B00F38D7D /* ustad_rahim_kushnawaz.jpg in Resources */,
 				5C869D5F198A9E46001DD09C /* rubab2ndStringUpstroke.aupreset in Resources */,
+				5CE14E01199D1A13005A738C /* strum@2x.png in Resources */,
 				5CACE3FC1993C1DA001B2461 /* rubabHistory.txt in Resources */,
 				5CF31C3F197F00380076A68D /* Images.xcassets in Resources */,
 				5C7AC15C1987138F003F5940 /* rubab3rdString.aupreset in Resources */,
 				5C7AC15B1987138F003F5940 /* rubab2ndString.aupreset in Resources */,
 				5C97673D199140850023FC23 /* fret.jpg in Resources */,
+				5CE14DFF199CEDDC005A738C /* soundhole.png in Resources */,
 				5C7AC15A1987138F003F5940 /* rubab1stString.aupreset in Resources */,
 				5C4B2CDB199BB8F900F38D7D /* tempString@2x.png in Resources */,
 				5C966D2B199A7B0600129C65 /* raagNavButton.jpg in Resources */,
@@ -349,7 +357,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C19E152198958C600AFBFE1 /* GestureViewController.m in Sources */,
-				5CF31C3A197F00380076A68D /* ViewController.m in Sources */,
 				5CF31C37197F00380076A68D /* AppDelegate.m in Sources */,
 				5C3A307F19929D8B00417625 /* HomeViewController.m in Sources */,
 				5C4B2CDE199BBDFD00F38D7D /* TableViewController.m in Sources */,
@@ -412,8 +419,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Matt Hill (S8NG58V3C2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dylan Halpern (4569CKBAB5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dylan Halpern (4569CKBAB5)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -433,7 +440,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "73EAE0EA-1B89-418A-823A-0EF5DC63D5D6";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos7.1;
 			};
 			name = Debug;
@@ -455,8 +462,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Matt Hill (S8NG58V3C2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dylan Halpern (4569CKBAB5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dylan Halpern (4569CKBAB5)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -469,7 +476,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "73EAE0EA-1B89-418A-823A-0EF5DC63D5D6";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos7.1;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -480,7 +487,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matt Hill (S8NG58V3C2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = RealRaag/RealRaag.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -492,7 +500,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6338D6D8-E375-4009-8E66-59E25F8A7B84";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -501,7 +509,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matt Hill (S8NG58V3C2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREFIX_HEADER = RealRaag/RealRaag.pch;
 				HEADER_SEARCH_PATHS = (
@@ -514,7 +523,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6338D6D8-E375-4009-8E66-59E25F8A7B84";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

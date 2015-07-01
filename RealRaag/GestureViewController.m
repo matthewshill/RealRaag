@@ -11,6 +11,7 @@
 #define kImageFretHighlight [UIImage imageNamed:@"fretHighlight"]
 #define kStringImage [UIImage imageNamed:@"tempString"]
 #define kFretImage [UIImage imageNamed:@"fret"]
+#define kStrumImage [UIImage imageNamed:@"strum"]
 #define kStringWidth 3.f
 
 @interface GestureViewController () <StrumDelegate, FretDelegate>
@@ -26,7 +27,7 @@
     self.navigationItem.title = @"Free Play";
     
     NSInteger fret_height = (self.view.bounds.size.height - (STRUM_HEIGHT) - 44) / 4;
-    NSInteger fret_width = self.view.bounds.size.width / 3;
+    NSInteger fret_width = self.view.bounds.size.width / 3 + 1;
     
     
     _imageArray = [[NSMutableArray alloc] init];
@@ -36,15 +37,25 @@
     
     //setup fretboard images
     for (int string = 0; string < 3; string++) {
-        for(int fret = 0; fret < 4; fret++){
+        for(int fret = 0; fret < 5; fret++){
+            if (fret == 4) {
+                CGRect rect = CGRectMake(string * fret_width, fret_height * fret + 44, fret_width,  self.view.bounds.size.height - fret_height * 4);
+                _imageView = [[UIImageView alloc] initWithFrame:rect];
+                [_imageView setImage:kStrumImage];
+                [self.view addSubview:_imageView];
+                break;
+            }
+            
             CGRect rect = CGRectMake(string * fret_width, fret_height * fret + 44, fret_width, fret_height);
             _imageView = [[UIImageView alloc] initWithFrame:rect];
             [_imageView setImage:kFretImage];
             [self.view addSubview:_imageView];
             _imageView.userInteractionEnabled = YES;
             [_imageArray addObject:_imageView];
+            
         }
     }
+
     
     //setup string images
     _stringOneImage = [[UIImageView alloc] initWithFrame:[self frameForRestingStringAtIndex:0]];
@@ -98,6 +109,7 @@
         [_rightPanelTable.tableView setFrame:self.view.bounds];
     }];*/
     
+
     //add navigation button
     UIButton *raagNavButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [raagNavButton setImage:[UIImage imageNamed:@"raagNavButton.jpg"] forState:UIControlStateNormal];
@@ -106,7 +118,7 @@
     UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithCustomView:raagNavButton];
     self.navigationItem.rightBarButtonItem = rightBarButton;
     
-    _popUp = [[UIActionSheet alloc] initWithTitle:@"ActionSheet" delegate:_popUp.delegate cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Raags",@"Tutorial", nil];
+    _popUp = [[UIActionSheet alloc] initWithTitle:@"Tutorial" delegate:_popUp.delegate cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"How To Play",@"Yeman",@"Kesturi",@"Asa", @"Bhairavi", @"Excercises", nil];
     _popUp.tag = 1;
 }
 
