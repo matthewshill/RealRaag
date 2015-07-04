@@ -16,11 +16,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = bgColor;
+    
+    UIImage *border = borderImage;
+    UIImageView *borderView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    borderView.image = border;
+    [self.view addSubview:borderView];
+    
     //self.navigationController.navigationBarHidden = YES;
     _scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
     _scrollView.contentSize = CGSizeMake(320, 900);
     [self.view addSubview:_scrollView];
-    
+    /*
     CGRect rect = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height/2);
     _rubabImage = [[UIImageView alloc] initWithFrame:rect];
     [_rubabImage setImage:[UIImage imageNamed:@"rubab1.jpg"]];
@@ -34,7 +42,7 @@
     [b addTarget:self action:@selector(imageTapped:) forControlEvents:UIControlEventTouchUpInside];
     [b setTag:_rubabImage.tag];
     [_rubabImage addSubview:b];
-    
+    */
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"rubabHistory" ofType:@"txt"];
     NSError *error;
     NSLog(@"file path: %@", filePath);
@@ -51,13 +59,14 @@
     //add text view container to layout
     [textLayout addTextContainer:textContainer];
     //UITextView object using text container
-    _historyText = [[UITextView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height/2, self.view.bounds.size.width, 580) textContainer:textContainer];
+    _historyText = [[UITextView alloc] initWithFrame:CGRectMake(35, self.view.bounds.size.height/3, 230, 600) textContainer:textContainer];
+    _historyText.backgroundColor = bgColor;
     [_historyText setScrollEnabled:NO];
     [_historyText setEditable:NO];
-    //[self.view addSubview:_historyText];
-    [_scrollView addSubview:_historyText];
+    [self.view addSubview:_historyText];
+    //[_scrollView addSubview:_historyText];
     
-    self.navigationItem.title = @"RealRaag";
+    //self.navigationItem.title = @"RealRaag";
     
 }
 

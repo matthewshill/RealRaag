@@ -8,12 +8,6 @@
 
 #import "GestureViewController.h"
 
-#define kImageFretHighlight [UIImage imageNamed:@"fretHighlight"]
-#define kStringImage [UIImage imageNamed:@"tempString"]
-#define kFretImage [UIImage imageNamed:@"fret"]
-#define kStrumImage [UIImage imageNamed:@"strum"]
-#define kStringWidth 3.f
-
 @interface GestureViewController () <StrumDelegate, FretDelegate>
 @property RightPanelTableViewController *rightPanelTable;
 @property UIActionSheet *popUp;
@@ -24,7 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"Free Play";
+    //self.navigationItem.title = @"Free Play";
     
     NSInteger fret_height = (self.view.bounds.size.height - (STRUM_HEIGHT) - 44) / 4;
     NSInteger fret_width = self.view.bounds.size.width / 3 + 1;
@@ -36,24 +30,26 @@
     _stringThreeFretDown = [[NSMutableArray alloc] init];
     
     //setup fretboard images
+    int i = 2;
     for (int string = 0; string < 3; string++) {
         for(int fret = 0; fret < 5; fret++){
             if (fret == 4) {
-                CGRect rect = CGRectMake(string * fret_width, fret_height * fret + 44, fret_width,  self.view.bounds.size.height - fret_height * 4);
+                CGRect rect = CGRectMake(string * fret_width, fret_height * fret, fret_width,  self.view.bounds.size.height - fret_height * 4);
                 _imageView = [[UIImageView alloc] initWithFrame:rect];
-                [_imageView setImage:kStrumImage];
+                [_imageView setImage:[self getFretFileName:i]];
                 [self.view addSubview:_imageView];
                 break;
             }
             
-            CGRect rect = CGRectMake(string * fret_width, fret_height * fret + 44, fret_width, fret_height);
+            CGRect rect = CGRectMake(string * fret_width, fret_height * fret, fret_width, fret_height);
             _imageView = [[UIImageView alloc] initWithFrame:rect];
-            [_imageView setImage:kFretImage];
+            [_imageView setImage:[self getFretFileName:i]];
             [self.view addSubview:_imageView];
             _imageView.userInteractionEnabled = YES;
             [_imageArray addObject:_imageView];
             
         }
+             i++;
     }
 
     
@@ -138,7 +134,9 @@
 -(BOOL)prefersStatusBarHidden{
     return YES;
 }
-
+-(UIImage *)getFretFileName:(int)i{
+    return [UIImage imageNamed:[NSString stringWithFormat: @"%@%i", kFretFileName, i]];
+}
 -(void)raagButtonClicked{
     NSLog(@"CLICKED");
     /*[UIView animateWithDuration:0.05f animations:^{
