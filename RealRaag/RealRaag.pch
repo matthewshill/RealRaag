@@ -21,7 +21,7 @@
 #define kStringImage [UIImage imageNamed:@"tempString"]
 #define kFretImage [UIImage imageNamed:@"fret"]
 #define kStrumImage [UIImage imageNamed:@"strum"]
-#define kFretFileName @"Images/fret_0"
+#define kFretFileName @"Images/fret"
 #define kStringWidth 3.f
 
 // Include any system framework and library headers here that should be included in all compilation units.

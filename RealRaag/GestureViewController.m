@@ -20,8 +20,8 @@
     [super viewDidLoad];
     //self.navigationItem.title = @"Free Play";
     
-    NSInteger fret_height = (self.view.bounds.size.height - (STRUM_HEIGHT) - 44) / 4;
-    NSInteger fret_width = self.view.bounds.size.width / 3 + 1;
+    NSInteger fret_height = (self.view.bounds.size.height + 10) / 5;
+    NSInteger fret_width = (self.view.bounds.size.width / 3) + 1;
     
     
     _imageArray = [[NSMutableArray alloc] init];
@@ -30,26 +30,20 @@
     _stringThreeFretDown = [[NSMutableArray alloc] init];
     
     //setup fretboard images
-    int i = 2;
+    
     for (int string = 0; string < 3; string++) {
         for(int fret = 0; fret < 5; fret++){
-            if (fret == 4) {
-                CGRect rect = CGRectMake(string * fret_width, fret_height * fret, fret_width,  self.view.bounds.size.height - fret_height * 4);
-                _imageView = [[UIImageView alloc] initWithFrame:rect];
-                [_imageView setImage:[self getFretFileName:i]];
-                [self.view addSubview:_imageView];
-                break;
-            }
             
             CGRect rect = CGRectMake(string * fret_width, fret_height * fret, fret_width, fret_height);
             _imageView = [[UIImageView alloc] initWithFrame:rect];
-            [_imageView setImage:[self getFretFileName:i]];
+            [_imageView setImage:[self getFretFileName:(fret + (string * 10))]];
             [self.view addSubview:_imageView];
             _imageView.userInteractionEnabled = YES;
             [_imageArray addObject:_imageView];
             
+            
         }
-             i++;
+       
     }
 
     
@@ -135,7 +129,9 @@
     return YES;
 }
 -(UIImage *)getFretFileName:(int)i{
-    return [UIImage imageNamed:[NSString stringWithFormat: @"%@%i", kFretFileName, i]];
+    NSString *fileName = [NSString stringWithFormat: @"%@%i", kFretFileName, i + 1];
+    NSLog(@"%@", fileName);
+    return [UIImage imageNamed:fileName];
 }
 -(void)raagButtonClicked{
     NSLog(@"CLICKED");
