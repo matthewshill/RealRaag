@@ -12,8 +12,9 @@
 
 @interface HomeViewController : UIViewController
 
-@property (nonatomic) UIButton *playButton;
-@property (nonatomic) UIButton *historyButton;
-@property (nonatomic) UIButton *tutorialButton;
+@property (weak, nonatomic) IBOutlet UIButton *historyButton;
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
+
+@property (weak, nonatomic) IBOutlet UILabel *logo;
 
 @end

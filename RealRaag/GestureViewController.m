@@ -33,17 +33,13 @@
     
     for (int string = 0; string < 3; string++) {
         for(int fret = 0; fret < 5; fret++){
-            
-            CGRect rect = CGRectMake(string * fret_width, fret_height * fret, fret_width, fret_height);
+            CGRect rect = CGRectMake(string * fret_width, (fret_height * fret) + (fret + 5), fret_width, fret_height);
             _imageView = [[UIImageView alloc] initWithFrame:rect];
             [_imageView setImage:[self getFretFileName:(fret + (string * 10))]];
             [self.view addSubview:_imageView];
             _imageView.userInteractionEnabled = YES;
             [_imageArray addObject:_imageView];
-            
-            
         }
-       
     }
 
     

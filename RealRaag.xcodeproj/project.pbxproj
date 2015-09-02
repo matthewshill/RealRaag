@@ -21,10 +21,10 @@
 		5C4B2CE0199BE60B00F38D7D /* ustad_rahim_kushnawaz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C4B2CDF199BE60B00F38D7D /* ustad_rahim_kushnawaz.jpg */; };
 		5C4B2CE2199BE69300F38D7D /* rubabPlayer.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C4B2CE1199BE69300F38D7D /* rubabPlayer.png */; };
 		5C4B2CF1199BF5BE00F38D7D /* RightPanelTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B2CF0199BF5BE00F38D7D /* RightPanelTableViewController.m */; };
+		5C6C80FA1B8AF027001AD0EA /* Licenses in Resources */ = {isa = PBXBuildFile; fileRef = 5C6C80F81B8AF027001AD0EA /* Licenses */; };
 		5C7AC15A1987138F003F5940 /* rubab1stString.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 5C7AC1571987138E003F5940 /* rubab1stString.aupreset */; };
 		5C7AC15B1987138F003F5940 /* rubab2ndString.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 5C7AC1581987138F003F5940 /* rubab2ndString.aupreset */; };
 		5C7AC15C1987138F003F5940 /* rubab3rdString.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 5C7AC1591987138F003F5940 /* rubab3rdString.aupreset */; };
-		5C7AC15E19871995003F5940 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 5C7AC15D19871995003F5940 /* Sounds */; };
 		5C869D5E198A9E46001DD09C /* rubab1stStringUpstroke.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 5C869D5B198A9E46001DD09C /* rubab1stStringUpstroke.aupreset */; };
 		5C869D5F198A9E46001DD09C /* rubab2ndStringUpstroke.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 5C869D5C198A9E46001DD09C /* rubab2ndStringUpstroke.aupreset */; };
 		5C869D60198A9E46001DD09C /* rubab3rdStringUpstroke.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 5C869D5D198A9E46001DD09C /* rubab3rdStringUpstroke.aupreset */; };
@@ -35,6 +35,8 @@
 		5CACE3FC1993C1DA001B2461 /* rubabHistory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CACE3FB1993C1DA001B2461 /* rubabHistory.txt */; };
 		5CC51A691993EF4D004FAF71 /* dismiss.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC51A681993EF4D004FAF71 /* dismiss.png */; };
 		5CC51A701993FF80004FAF71 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC51A6F1993FF80004FAF71 /* PhotoViewController.m */; };
+		5CDE90B71B939F9F003984A9 /* Linotype - Pide Nashi LT 1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CB102441B917D7E00FE2C04 /* Linotype - Pide Nashi LT 1.ttf */; };
+		5CDE90BB1B951690003984A9 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 5CDE90BA1B951690003984A9 /* Sounds */; };
 		5CE14DFF199CEDDC005A738C /* soundhole.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CE14DFE199CEDDB005A738C /* soundhole.png */; };
 		5CE14E01199D1A13005A738C /* strum@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CE14E00199D1A13005A738C /* strum@2x.png */; };
 		5CF31C34197F00380076A68D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF31C33197F00380076A68D /* main.m */; };
@@ -81,10 +83,10 @@
 		5C4B2CEF199BF5BE00F38D7D /* RightPanelTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightPanelTableViewController.h; sourceTree = "<group>"; };
 		5C4B2CF0199BF5BE00F38D7D /* RightPanelTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightPanelTableViewController.m; sourceTree = "<group>"; };
 		5C4BD9711981596200A31AF4 /* RealRaag.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealRaag.pch; sourceTree = "<group>"; };
+		5C6C80F81B8AF027001AD0EA /* Licenses */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Licenses; sourceTree = "<group>"; };
 		5C7AC1571987138E003F5940 /* rubab1stString.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rubab1stString.aupreset; sourceTree = "<group>"; };
 		5C7AC1581987138F003F5940 /* rubab2ndString.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rubab2ndString.aupreset; sourceTree = "<group>"; };
 		5C7AC1591987138F003F5940 /* rubab3rdString.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rubab3rdString.aupreset; sourceTree = "<group>"; };
-		5C7AC15D19871995003F5940 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		5C869D5B198A9E46001DD09C /* rubab1stStringUpstroke.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rubab1stStringUpstroke.aupreset; sourceTree = "<group>"; };
 		5C869D5C198A9E46001DD09C /* rubab2ndStringUpstroke.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rubab2ndStringUpstroke.aupreset; sourceTree = "<group>"; };
 		5C869D5D198A9E46001DD09C /* rubab3rdStringUpstroke.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rubab3rdStringUpstroke.aupreset; sourceTree = "<group>"; };
@@ -93,9 +95,11 @@
 		5C97673B199140850023FC23 /* fret.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fret.jpg; path = Images.xcassets/fret.jpg; sourceTree = "<group>"; };
 		5C97673C199140850023FC23 /* fretPressed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fretPressed.jpg; path = Images.xcassets/fretPressed.jpg; sourceTree = "<group>"; };
 		5CACE3FB1993C1DA001B2461 /* rubabHistory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rubabHistory.txt; sourceTree = "<group>"; };
+		5CB102441B917D7E00FE2C04 /* Linotype - Pide Nashi LT 1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Linotype - Pide Nashi LT 1.ttf"; sourceTree = "<group>"; };
 		5CC51A681993EF4D004FAF71 /* dismiss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dismiss.png; sourceTree = "<group>"; };
 		5CC51A6A1993F424004FAF71 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
 		5CC51A6F1993FF80004FAF71 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		5CDE90BA1B951690003984A9 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		5CE14DFE199CEDDB005A738C /* soundhole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soundhole.png; sourceTree = "<group>"; };
 		5CE14E00199D1A13005A738C /* strum@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "strum@2x.png"; sourceTree = "<group>"; };
 		5CF31C2E197F00380076A68D /* RealRaag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealRaag.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,8 +158,6 @@
 		5CF31C30197F00380076A68D /* RealRaag */ = {
 			isa = PBXGroup;
 			children = (
-				5CF85D2A1B427ADD005F10B8 /* Images */,
-				5C7AC15D19871995003F5940 /* Sounds */,
 				5CF31C54197F03CE0076A68D /* AudioController.h */,
 				5CF31C55197F03CE0076A68D /* AudioController.m */,
 				5CF31C35197F00380076A68D /* AppDelegate.h */,
@@ -176,7 +178,6 @@
 				5CC51A6F1993FF80004FAF71 /* PhotoViewController.m */,
 				5C15A1FC198851AE0098ADF4 /* StrumView.h */,
 				5C15A1FD198851AE0098ADF4 /* StrumView.m */,
-				5CF31C3B197F00380076A68D /* Main.storyboard */,
 				5CF31C3E197F00380076A68D /* Images.xcassets */,
 				5CF31C31197F00380076A68D /* Supporting Files */,
 				5CFA83801986A745007C2F20 /* MIDIHelper.h */,
@@ -190,6 +191,11 @@
 		5CF31C31197F00380076A68D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5CF31C3B197F00380076A68D /* Main.storyboard */,
+				5CDE90BA1B951690003984A9 /* Sounds */,
+				5CB102441B917D7E00FE2C04 /* Linotype - Pide Nashi LT 1.ttf */,
+				5CF85D2A1B427ADD005F10B8 /* Images */,
+				5C6C80F81B8AF027001AD0EA /* Licenses */,
 				5CE14DFE199CEDDB005A738C /* soundhole.png */,
 				5CE14E00199D1A13005A738C /* strum@2x.png */,
 				5C4B2CE1199BE69300F38D7D /* rubabPlayer.png */,
@@ -315,9 +321,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CDE90B71B939F9F003984A9 /* Linotype - Pide Nashi LT 1.ttf in Resources */,
 				5C4B2CD9199BB13E00F38D7D /* fretHighlight@2x.png in Resources */,
 				5C966D30199AAD0700129C65 /* string.jpg in Resources */,
-				5C7AC15E19871995003F5940 /* Sounds in Resources */,
+				5CDE90BB1B951690003984A9 /* Sounds in Resources */,
 				5CF31C3D197F00380076A68D /* Main.storyboard in Resources */,
 				5CF85D2B1B427ADD005F10B8 /* Images in Resources */,
 				5C4B2CE0199BE60B00F38D7D /* ustad_rahim_kushnawaz.jpg in Resources */,
@@ -328,6 +335,7 @@
 				5C7AC15C1987138F003F5940 /* rubab3rdString.aupreset in Resources */,
 				5C7AC15B1987138F003F5940 /* rubab2ndString.aupreset in Resources */,
 				5C97673D199140850023FC23 /* fret.jpg in Resources */,
+				5C6C80FA1B8AF027001AD0EA /* Licenses in Resources */,
 				5CE14DFF199CEDDC005A738C /* soundhole.png in Resources */,
 				5C7AC15A1987138F003F5940 /* rubab1stString.aupreset in Resources */,
 				5C4B2CDB199BB8F900F38D7D /* tempString@2x.png in Resources */,
@@ -501,6 +509,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -524,6 +533,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
