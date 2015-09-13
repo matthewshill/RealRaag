@@ -59,7 +59,7 @@
     //add text view container to layout
     [textLayout addTextContainer:textContainer];
     //UITextView object using text container
-    _historyText = [[UITextView alloc] initWithFrame:CGRectMake(35, self.view.bounds.size.height/3, 230, 600) textContainer:textContainer];
+    _historyText.text = text;
     _historyText.backgroundColor = bgColor;
     [_historyText setScrollEnabled:NO];
     [_historyText setEditable:NO];

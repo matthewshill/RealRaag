@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Rlq-wQ-2ZM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rlq-wQ-2ZM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Linotype - Pide Nashi LT 1.ttf">
+            <string>PideNashiLT-One</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Gesture View Controller-->
         <scene sceneID="GKg-6v-HFN">
@@ -14,7 +19,7 @@
                         <viewControllerLayoutGuide type="bottom" id="rmg-wr-vOk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hPu-K2-NIG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -22,7 +27,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GB2-Ya-sWH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="789" y="-72"/>
+            <point key="canvasLocation" x="1479.375" y="-90"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="3IR-UW-PRs">
@@ -33,15 +38,39 @@
                         <viewControllerLayoutGuide type="bottom" id="87v-UV-Y0h"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TEo-Ot-Z4R">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POM-bn-X3i">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="-16" y="10" width="800" height="800"/>
+                                </variation>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="POM-bn-X3i"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="POM-bn-X3i"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Khg-WZ-MX4"/>
+                    <connections>
+                        <outlet property="historyText" destination="POM-bn-X3i" id="3b7-H3-H6R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KhF-Io-hRH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="261" y="1180"/>
+            <point key="canvasLocation" x="489.375" y="1475"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="0z2-5x-Dvb">
@@ -52,27 +81,43 @@
                         <viewControllerLayoutGuide type="bottom" id="YLs-ht-opP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yjT-ez-bcx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Real Raag" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFb-hV-g2C">
-                                <rect key="frame" x="52" y="72" width="263" height="90"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXX-Dg-Tmd">
+                                <rect key="frame" x="247" y="236" width="106" height="106"/>
+                                <state key="normal" backgroundImage="HistoryIcon.png"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="107" y="207" width="106" height="106"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="283" y="303" width="178" height="154"/>
+                                </variation>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e86-JV-4ch">
-                                <rect key="frame" x="102" y="325" width="102" height="98"/>
-                                <state key="normal">
+                                <rect key="frame" x="251" y="398" width="98" height="98"/>
+                                <state key="normal" backgroundImage="playButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="111" y="342" width="98" height="98"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="292" y="497" width="160" height="149"/>
+                                </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXX-Dg-Tmd">
-                                <rect key="frame" x="102" y="190" width="102" height="100"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Real Raag" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="WFb-hV-g2C">
+                                <rect key="frame" x="24" y="64" width="553" height="135"/>
+                                <fontDescription key="fontDescription" name="PideNashiLT-One" family="Pide Nashi LT" pointSize="65"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-116" y="64" width="553" height="135"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="93" y="90" width="559" height="164"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -81,13 +126,13 @@
                         <outlet property="historyButton" destination="RXX-Dg-Tmd" id="DIQ-8v-7LS"/>
                         <outlet property="logo" destination="WFb-hV-g2C" id="Rcw-wL-IQ9"/>
                         <outlet property="playButton" destination="e86-JV-4ch" id="9gq-BQ-3WU"/>
-                        <segue destination="hBj-Xk-ZRH" kind="push" identifier="gestureSegue" id="R5P-po-BRI"/>
-                        <segue destination="Hlx-u7-DTz" kind="push" identifier="historySegue" id="Idm-Uj-QTc"/>
+                        <segue destination="hBj-Xk-ZRH" kind="show" identifier="gestureSegue" id="R5P-po-BRI"/>
+                        <segue destination="Hlx-u7-DTz" kind="show" identifier="historySegue" id="Idm-Uj-QTc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oSq-gb-Nj0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="198" y="-202"/>
+            <point key="canvasLocation" x="-394.5" y="214.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9mq-Pw-KKM">
@@ -102,12 +147,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAK-PJ-iep" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-376" y="-188"/>
+            <point key="canvasLocation" x="-1278" y="-196.5"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
-    </simulatedMetricsContainer>
+    <resources>
+        <image name="HistoryIcon.png" width="269" height="248"/>
+        <image name="playButton.png" width="232" height="241"/>
+    </resources>
 </document>

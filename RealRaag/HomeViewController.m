@@ -28,7 +28,7 @@
     borderView.image = border;
     [self.view addSubview:borderView];
 
-    self.logo.font = realRaagFont;
+    //self.logo.font = [UIFont fontWithName:@"Linotype - Pide Nashi LT 1.tff" size:self.logo.font.pointSize];;
 
     [_historyButton setBackgroundImage:historyButtonImage forState:UIControlStateNormal];
     [_historyButton addTarget:self action:@selector(historyButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
