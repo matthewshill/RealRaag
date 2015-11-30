@@ -16,56 +16,55 @@ NSUInteger *touchCount;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.userInteractionEnabled = YES;
+        [self setup];
         // Initialization code
     }
     return self;
 }
+-(id)init{
+    self = [super init];
+    if (self) {
+        [self setup];
+        // Initialization code
+    }
+    return self;
+}
+-(void)setup{
+    self.userInteractionEnabled = YES;
+    self.multipleTouchEnabled = YES;
+    _stringOneTouches = [[NSMutableArray alloc] init];
+    _stringTwoTouches = [[NSMutableArray alloc] init];
+    _stringThreeTouches = [[NSMutableArray alloc] init];
+}
+
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    touchCount = [touches count];
     NSUInteger tapCount = [[touches anyObject] tapCount];
-    //NSLog(@"touch count: %lu", (unsigned long)touchCount);
-    //NSLog(@"tap count: %lu", (unsigned long)tapCount);
     CGPoint startPoint = [[touches anyObject] locationInView:self];
-    //NSLog(@"(x,y) = %f %f", startPoint.x, startPoint.y);
-    CGFloat height = self.bounds.size.height;
-    //NSLog(@"screen height: %f", height);
-    
-    /*if (startPoint.y < [self fretOneStart] && startPoint.x < [self stringOneStart]) {
-        NSLog(@"FRET ONE - STRING ONE");
-    }
-    if ((startPoint.y > [self fretOneEnd] && startPoint.y < [self fretTwoStart]) && startPoint.x < [self stringOneStart]) {
-        NSLog(@"FRET TWO - STRING ONE");
-    }
-    if ((startPoint.y > [self fretTwoEnd] && startPoint.y < [self fretThreeStart]) && startPoint.x < [self stringOneStart]) {
-        NSLog(@"FRET THREE - STRING ONE");
-    }
-    if((startPoint.y > [self fretThreeEnd]) && startPoint.x < [self stringOneStart]){
-        NSLog(@"FRET FOUR - STRING ONE");
-    }*/
-    
-    Fret fretIndex = FretOpen;
     
     NSInteger fretLength = (self.bounds.size.height / 4);
-    NSInteger fret = (startPoint.y / fretLength);
+    NSInteger fret = (startPoint.y / fretLength) + 1;
     
     NSInteger stringLength = (self.bounds.size.width / 3);
     NSInteger string = (startPoint.x / stringLength);
 
+    Fret fretIndex = fret;
     
-    if (fret == 0) {
-        fretIndex = FretOne;
+    //check which fret is touched
+    switch (string) {
+        case 0:
+            [_stringOneTouches addObject:touches];
+            break;
+        case 1:
+            [_stringTwoTouches addObject:touches];
+            break;
+        case 2:
+            [_stringThreeTouches addObject:touches];
+            break;
+        default:
+            break;
     }
-    if (fret == 1) {
-        fretIndex = FretTwo;
-    }
-    if(fret == 2) {
-        fretIndex = FretThree;
-    }
-    if (fret == 3) {
-        fretIndex = FretFour;
-    }
+    
     if(self.delegate){
         [self.delegate fretsPressed:fretIndex stringIndex:string];
     }
@@ -76,47 +75,70 @@ NSUInteger *touchCount;
     NSUInteger touchCount = [touches count];
     //NSLog(@"touch moved count: %lu", (unsigned long)touchCount);
     CGPoint startPoint = [[touches anyObject] locationInView:self];
-    //NSLog(@"(x,y) = %f %f", startPoint.x, startPoint.y);
-    /*if (startPoint.y < [self fretOneStart]) {
-        NSLog(@"FRET ONE");
-    }
-    if (startPoint.y > [self fretOneEnd] && startPoint.y < [self fretTwoStart]) {
-        NSLog(@"FRET TWO");
-    }
-    if (startPoint.y > [self fretTwoEnd] && startPoint.y < [self fretThreeStart]) {
-        NSLog(@"FRET THREE");
-    }
-    if(startPoint.y > [self fretThreeEnd]){
-        NSLog(@"FRET FOUR");
-    }*/
-    Fret fretIndex = FretOpen;
+
+    //Fret fretIndex = FretOpen;
     NSInteger fretLength = (self.bounds.size.height / 4);
-    NSInteger fret = (startPoint.y / fretLength);
+    NSInteger fret = (startPoint.y / fretLength) + 1;
     
     NSInteger stringLength = (self.bounds.size.width / 3);
     NSInteger string = (startPoint.x / stringLength);
     
-    if (fret == 0) {
-        fretIndex = FretOne;
+    Fret fretIndex = fret;
+    
+    if ([_stringOneTouches containsObject:touches] && string != 0) {
+        
+        if (string == 1) {
+            [_stringTwoTouches addObject:touches];
+        }
+        if (string == 2){
+            [_stringThreeTouches addObject:touches];
+        }
+        [_stringOneTouches removeObject:touches];
     }
-    if (fret == 1) {
-        fretIndex = FretTwo;
-    }
-    if(fret == 2) {
-        fretIndex = FretThree;
-    }
-    if (fret == 3) {
-        fretIndex = FretFour;
+
+    if([_stringTwoTouches containsObject:touches] && string != 1) {
+        if (string == 0) {
+            [_stringOneTouches addObject:touches];
+        }
+        if (string == 2) {
+            [_stringThreeTouches addObject:touches];
+        }
+        [_stringTwoTouches removeObject:touches];
     }
     
-    if(self.delegate){
+    if([_stringThreeTouches containsObject:touches] && string != 2){
+        if(string == 0){
+            [_stringOneTouches addObject:touches];
+        }
+        if(string == 1){
+            [_stringTwoTouches addObject:touches];
+        }
+        [_stringThreeTouches removeObject:touches];
+    }
+    
+    if(self.delegate && fretIndex < 5){
         [self.delegate fretsPressed:fretIndex stringIndex:string];
     }
 }
 
--(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event{
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    int string = -1;
+    
+    if([_stringOneTouches containsObject:touches]){
+        [_stringOneTouches removeObject:touches];
+        string = 0;
+    }
+    if([_stringTwoTouches containsObject:touches]){
+        [_stringTwoTouches removeObject:touches];
+        string = 1;
+    }
+    if([_stringThreeTouches containsObject:touches]){
+        [_stringThreeTouches removeObject:touches];
+        string = 2;
+    }
+    
     if(self.delegate){
-        [self.delegate fretsPressed:FretOpen stringIndex:-1];
+        [self.delegate fretsPressed:FretOpen stringIndex:string];
     }
 }
 

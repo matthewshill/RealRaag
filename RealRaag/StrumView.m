@@ -29,9 +29,16 @@
     return self;
     
 }
+- (id)init{
+    self = [super init];
+    if(self){
+        [self setup];
+    }
+    return self;
+}
 -(void)setup{
-    self.layer.borderWidth = 2;
-    self.layer.borderColor = [UIColor blackColor].CGColor;
+    //self.layer.borderWidth = 2;
+    //self.layer.borderColor = [UIColor blackColor].CGColor;
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -95,8 +102,11 @@
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-    
+    if(self.delegate){
+        [self.delegate stringHit:-1];
+    }
 }
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

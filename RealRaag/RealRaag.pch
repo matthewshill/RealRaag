@@ -13,6 +13,17 @@
 #define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define STRING_WIDTH 3
 #define FRET_HEIGHT [[UIView FretView] bounds].size.height
+#define STRUM_HEIGHT 108
+#define borderImage [UIImage imageNamed:@"Images/border"];
+#define historyButtonImage [UIImage imageNamed:@"Images/HistoryIcon"]
+#define bgColor [UIColor colorWithRed:(246.0/255.0) green:(146.0/255.0) blue:(30.0/255.0) alpha:1.0]
+#define kImageFretHighlight [UIImage imageNamed:@"fretHighlight"]
+#define kStringImage [UIImage imageNamed:@"tempString"]
+#define kFretImage [UIImage imageNamed:@"fret"]
+#define kStrumImage [UIImage imageNamed:@"strum"]
+#define kFretFileName @"Images/fret"
+#define kStringWidth 3.f
+#define realRaagFont [UIFont fontWithName:@"PideNashiLT-One" size:self.font.pointSize];
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.

@@ -18,4 +18,7 @@
 
 @interface FretView : BaseStringView
 @property (nonatomic, weak) id <FretDelegate> delegate;
+@property (nonatomic) NSMutableArray *stringOneTouches;
+@property (nonatomic) NSMutableArray *stringTwoTouches;
+@property (nonatomic) NSMutableArray *stringThreeTouches;
 @end
