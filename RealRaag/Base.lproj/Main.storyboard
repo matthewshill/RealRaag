@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rlq-wQ-2ZM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Linotype - Pide Nashi LT 1.ttf">
+            <string>PideNashiLT-One</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Gesture View Controller-->
+        <scene sceneID="GKg-6v-HFN">
+            <objects>
+                <viewController id="hBj-Xk-ZRH" customClass="GestureViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6eA-HS-9df"/>
+                        <viewControllerLayoutGuide type="bottom" id="rmg-wr-vOk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hPu-K2-NIG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QwH-wq-OJ2">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="kbK-nm-zOV">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ryt-Ym-tTq">
+                                <rect key="frame" x="461" y="-11" width="119" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="Back.png"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GB2-Ya-sWH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1479.375" y="-90"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="3IR-UW-PRs">
+            <objects>
+                <viewController id="Hlx-u7-DTz" customClass="HistoryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jr2-pP-Dtk"/>
+                        <viewControllerLayoutGuide type="bottom" id="87v-UV-Y0h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TEo-Ot-Z4R">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POM-bn-X3i">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="-16" y="10" width="800" height="800"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="POM-bn-X3i"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="POM-bn-X3i"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="Khg-WZ-MX4"/>
+                    <connections>
+                        <outlet property="historyText" destination="POM-bn-X3i" id="3b7-H3-H6R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KhF-Io-hRH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="489.375" y="1475"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="0z2-5x-Dvb">
+            <objects>
+                <viewController id="CyL-m1-EOv" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UyK-GV-N4w"/>
+                        <viewControllerLayoutGuide type="bottom" id="YLs-ht-opP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yjT-ez-bcx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXX-Dg-Tmd">
+                                <rect key="frame" x="247" y="236" width="106" height="106"/>
+                                <animations/>
+                                <state key="normal" backgroundImage="HistoryIcon.png"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="107" y="207" width="106" height="106"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="283" y="303" width="178" height="154"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e86-JV-4ch">
+                                <rect key="frame" x="251" y="398" width="98" height="98"/>
+                                <animations/>
+                                <state key="normal" backgroundImage="playButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="111" y="342" width="98" height="98"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="292" y="497" width="160" height="149"/>
+                                </variation>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Real Raag" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="WFb-hV-g2C">
+                                <rect key="frame" x="24" y="64" width="553" height="135"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="PideNashiLT-One" family="Pide Nashi LT" pointSize="65"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-116" y="64" width="553" height="135"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="93" y="90" width="559" height="164"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jqE-0V-VRd"/>
+                    <connections>
+                        <outlet property="historyButton" destination="RXX-Dg-Tmd" id="DIQ-8v-7LS"/>
+                        <outlet property="logo" destination="WFb-hV-g2C" id="Rcw-wL-IQ9"/>
+                        <outlet property="playButton" destination="e86-JV-4ch" id="9gq-BQ-3WU"/>
+                        <segue destination="hBj-Xk-ZRH" kind="show" identifier="gestureSegue" id="R5P-po-BRI"/>
+                        <segue destination="Hlx-u7-DTz" kind="show" identifier="historySegue" id="Idm-Uj-QTc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oSq-gb-Nj0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-394.5" y="214.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9mq-Pw-KKM">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Rlq-wQ-2ZM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YPj-a4-yFv">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CyL-m1-EOv" kind="relationship" relationship="rootViewController" id="78i-0z-fcm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oAK-PJ-iep" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1278" y="-196.5"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="CEZ-g2-z8A">
+            <objects>
+                <tableViewController id="m4m-Cc-WeW" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="VRV-oS-Ors">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jQw-NC-wj3">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jQw-NC-wj3" id="Ul8-FS-78O">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="m4m-Cc-WeW" id="VNV-GV-Lng"/>
+                            <outlet property="delegate" destination="m4m-Cc-WeW" id="eEe-Xt-b98"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="W1H-H1-Iv1"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kYY-TF-Goi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jAh-yS-Pa4">
+            <objects>
+                <navigationController id="Kqo-11-js0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JIU-jn-Pob">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="m4m-Cc-WeW" kind="relationship" relationship="rootViewController" id="H4U-0h-s4U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k91-PZ-bXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Back.png" width="65" height="65"/>
+        <image name="HistoryIcon.png" width="269" height="248"/>
+        <image name="playButton.png" width="232" height="241"/>
+    </resources>
+</document>

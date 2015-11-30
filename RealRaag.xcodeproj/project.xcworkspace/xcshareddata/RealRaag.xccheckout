@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>51D1353B-E92A-4996-A46B-2083DB84F570</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RealRaag</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3037D25BC9D90E17CC8785B4EE7437D4EA531EBF</key>
+		<string>https://github.com/matthewshill/SASJazz.git</string>
+		<key>5571A076F0BB11C77E4BFFB1596390F652BA4538</key>
+		<string>https://github.com/matthewshill/RealRaag.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>RealRaag.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3037D25BC9D90E17CC8785B4EE7437D4EA531EBF</key>
+		<string>../../..</string>
+		<key>5571A076F0BB11C77E4BFFB1596390F652BA4538</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/matthewshill/RealRaag.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5571A076F0BB11C77E4BFFB1596390F652BA4538</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3037D25BC9D90E17CC8785B4EE7437D4EA531EBF</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5571A076F0BB11C77E4BFFB1596390F652BA4538</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RealRaag</string>
+		</dict>
+	</array>
+</dict>
+</plist>
