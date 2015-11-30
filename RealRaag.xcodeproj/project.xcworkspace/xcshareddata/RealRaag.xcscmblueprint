@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1774B6D8B7E5101C1AAB6BA795BF7399DF7673F5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1774B6D8B7E5101C1AAB6BA795BF7399DF7673F5" : 0,
+    "3037D25BC9D90E17CC8785B4EE7437D4EA531EBF" : 0,
+    "5571A076F0BB11C77E4BFFB1596390F652BA4538" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "51D1353B-E92A-4996-A46B-2083DB84F570",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1774B6D8B7E5101C1AAB6BA795BF7399DF7673F5" : "RealRaag-master\/",
+    "3037D25BC9D90E17CC8785B4EE7437D4EA531EBF" : "",
+    "5571A076F0BB11C77E4BFFB1596390F652BA4538" : "RealRaag"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RealRaag",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RealRaag.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/matthewshill\/RealRaag.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1774B6D8B7E5101C1AAB6BA795BF7399DF7673F5"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/matthewshill\/SASJazz.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3037D25BC9D90E17CC8785B4EE7437D4EA531EBF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/matthewshill\/RealRaag.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5571A076F0BB11C77E4BFFB1596390F652BA4538"
+    }
+  ]
+}

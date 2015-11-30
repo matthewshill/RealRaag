@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rlq-wQ-2ZM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rlq-wQ-2ZM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+>>>>>>> 3d90e7fdb12d90fe05527fd3aa42205645241c4f
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Linotype - Pide Nashi LT 1.ttf">
@@ -21,6 +28,7 @@
                     <view key="view" contentMode="scaleToFill" id="hPu-K2-NIG">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+<<<<<<< HEAD
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -34,6 +42,11 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+=======
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QwH-wq-OJ2"/>
+>>>>>>> 3d90e7fdb12d90fe05527fd3aa42205645241c4f
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GB2-Ya-sWH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,7 +66,10 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POM-bn-X3i">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+<<<<<<< HEAD
                                 <animations/>
+=======
+>>>>>>> 3d90e7fdb12d90fe05527fd3aa42205645241c4f
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -62,7 +78,10 @@
                                 </variation>
                             </textView>
                         </subviews>
+<<<<<<< HEAD
                         <animations/>
+=======
+>>>>>>> 3d90e7fdb12d90fe05527fd3aa42205645241c4f
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
@@ -98,7 +117,10 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXX-Dg-Tmd">
                                 <rect key="frame" x="247" y="236" width="106" height="106"/>
+<<<<<<< HEAD
                                 <animations/>
+=======
+>>>>>>> 3d90e7fdb12d90fe05527fd3aa42205645241c4f
                                 <state key="normal" backgroundImage="HistoryIcon.png"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="107" y="207" width="106" height="106"/>
@@ -109,7 +131,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e86-JV-4ch">
                                 <rect key="frame" x="251" y="398" width="98" height="98"/>
+<<<<<<< HEAD
                                 <animations/>
+=======
+>>>>>>> 3d90e7fdb12d90fe05527fd3aa42205645241c4f
                                 <state key="normal" backgroundImage="playButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -122,7 +147,10 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Real Raag" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="WFb-hV-g2C">
                                 <rect key="frame" x="24" y="64" width="553" height="135"/>
+<<<<<<< HEAD
                                 <animations/>
+=======
+>>>>>>> 3d90e7fdb12d90fe05527fd3aa42205645241c4f
                                 <fontDescription key="fontDescription" name="PideNashiLT-One" family="Pide Nashi LT" pointSize="65"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -134,7 +162,10 @@
                                 </variation>
                             </label>
                         </subviews>
+<<<<<<< HEAD
                         <animations/>
+=======
+>>>>>>> 3d90e7fdb12d90fe05527fd3aa42205645241c4f
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="jqE-0V-VRd"/>
@@ -156,7 +187,10 @@
                 <navigationController definesPresentationContext="YES" id="Rlq-wQ-2ZM" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YPj-a4-yFv">
                         <autoresizingMask key="autoresizingMask"/>
+<<<<<<< HEAD
                         <animations/>
+=======
+>>>>>>> 3d90e7fdb12d90fe05527fd3aa42205645241c4f
                     </navigationBar>
                     <connections>
                         <segue destination="CyL-m1-EOv" kind="relationship" relationship="rootViewController" id="78i-0z-fcm"/>
@@ -166,6 +200,7 @@
             </objects>
             <point key="canvasLocation" x="-1278" y="-196.5"/>
         </scene>
+<<<<<<< HEAD
         <!--Root View Controller-->
         <scene sceneID="CEZ-g2-z8A">
             <objects>
@@ -216,6 +251,10 @@
     </scenes>
     <resources>
         <image name="Back.png" width="65" height="65"/>
+=======
+    </scenes>
+    <resources>
+>>>>>>> 3d90e7fdb12d90fe05527fd3aa42205645241c4f
         <image name="HistoryIcon.png" width="269" height="248"/>
         <image name="playButton.png" width="232" height="241"/>
     </resources>
